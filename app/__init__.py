@@ -15,7 +15,7 @@ with app.app_context():
 
 @app.route("/")
 def index():
-    return "TEST"
+    return "TEST2"
 
 if __name__ == "__main__":
     app.run(debug=True)
