@@ -39,7 +39,8 @@ def random_photo(valid_records_random):
     valid_records_random.remove(taken_pic)
     return taken_pic
 
-
-CorrectPhoto = random_photo(valid_records_random)
-InCorrectPhotos = r.sample(valid_records_random, 3)
-print(CorrectPhoto, get_display_for_picture_id(CorrectPhoto), InCorrectPhotos)
+def generate_output():
+    CorrectPhoto = random_photo(valid_records_random)
+    InCorrectPhotos = r.sample(valid_records_random, 3)
+    return (CorrectPhoto, InCorrectPhotos, get_display_for_picture_id(CorrectPhoto))
+    
