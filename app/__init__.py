@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request, abort, session, redirect, url_for, flash
 from werkzeug.security import generate_password_hash, check_password_hash
 from models import db, User, UserServer
-# import excel_fetch
 import re
 
 # inicjalizacja aplikacji
@@ -16,7 +15,7 @@ def create_account(uname, pwd, birth_year=None, residency=None, sex=None, accoun
     db.session.add(new_user_server)
     if account_type == 'user':
         new_user_data = User(birthYear = birth_year, sex=sex, placeOfResidence=residency) #personal data of the user
-    db.session.add(new_user_data)
+        db.session.add(new_user_data)
     db.session.commit() #adding user into login db and data db
 
 def map_residency_vals(val):
@@ -61,6 +60,8 @@ def register():
         p = str(request.form.get('password_signup'))     
         pc = str(request.form.get('confirm_password'))
 
+        
+        print(u, p, pc)
         account_type = session['user_type']
         birth_year = int(str(request.form.get('birth_year'))[:4])  # parsing birth year from birth date
         sex = str(request.form.get('gender'))   
@@ -69,6 +70,8 @@ def register():
         residency = map_residency_vals(residency)
 
         #u, p, pc = '', 'zaq1@WSX', 'zaq1@WSX'
+
+        print(u, p, pc)
 
         # validation starts here
         if len(u) == 0:                                               # null username
@@ -97,8 +100,7 @@ def home():
 
 @app.route("/test_form1", methods=['GET', 'POST'])
 def test_form1():
-    #photo_name = file.generate()
-    #return render_template('test_form1.html', photo_name)
+    
     pass
 
 

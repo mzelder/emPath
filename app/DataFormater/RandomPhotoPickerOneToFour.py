@@ -2,7 +2,7 @@ import os
 import json
 import random as r
 
-valid_records_file_path = '\app\\DataFormater\\valid_records.txt'
+valid_records_file_path = 'valid_records.txt'
 
 valid_records_origin = []
 with open(valid_records_file_path, 'r') as file:
@@ -19,13 +19,13 @@ def random_photo(valid_records_random):
 
 def choose_correct_emotion():
     # Wczytaj Picture ID z pliku valid_records.txt
-    with open('\app\\DataFormater\\valid_records.txt', 'r') as file:
+    with open('valid_records.txt', 'r') as file:
         valid_records = [line.strip() for line in file.readlines()]
 
     chosen_picture_id = r.choice(valid_records)
 
     # Wczytaj dane z pliku testformated.json
-    with open('\app\\DataFormater\\textformated.json', 'r') as json_file:
+    with open('textformated.json', 'r') as json_file:
         json_data = json.load(json_file)
 
     # Znajdź wartość Display dla wybranego Picture ID
@@ -40,23 +40,6 @@ def choose_correct_emotion():
     # Losuj 3 niepoprawne emocje z listy emocji
     emotions.remove(correct_emotion)
     incorrect_emotions = r.sample(emotions, 3)
-
-    # Drukuj pytanie
-    print(f"Jaką emocję wyraża obrazek o ID: {chosen_picture_id}?")
-    print(f") {correct_emotion.capitalize()}")
-    print(f") {incorrect_emotions[0].capitalize()}")
-    print(f") {incorrect_emotions[1].capitalize()}")
-    print(f") {incorrect_emotions[2].capitalize()}")
-
-    # Pobierz odpowiedź od użytkownika
-    user_answer = input("Wybierz poprawną odpowiedź: ")
-
-    # Sprawdź poprawność odpowiedzi
-    if user_answer.lower() == correct_emotion:
-        return True
-    else:
-        return False
-
-print(choose_correct_emotion())
+    return (correct_emotion, incorrect_emotions)
 
 

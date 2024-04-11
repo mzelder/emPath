@@ -7,32 +7,40 @@ db = SQLAlchemy()
 # modale do zwrotu
 class User(db.Model):
     __tablename__ = "users"
-    id = db.Column(db.Integer, primary_key=True)
-    birthYear = db.Column(db.Integer, nullable=False)
-    sex = db.Column(db.String(1), nullable=False)
+    userId = db.Column(db.Integer, primary_key=True) #Identyfikator użytkownika
+    birthYear = db.Column(db.Integer, nullable=False) #Rok urodzenia użytkownika.
+    sex = db.Column(db.Enum('F', 'M'), nullable=False) #Płeć metrykalna w momencie narodzin. F or M
     placeOfResidence = db.Column(db.String(50), nullable=False) # village < 20 tys, town - 20-100 tys, city > 100 tys
+    additionalInformation = db.Column(db.String(500), nullable=True) #Opcjonalne. Dodatkowe informacje o użytkowniku. Np. zawód, wykształcenie, przebyte choroby.
     training_sessions = db.relationship("Training_Session", backref="user", lazy=True)
 
 class Training_Session(db.Model):
     __tablename__ = "training_sessions"
-    id = db.Column(db.Integer, primary_key=True)
-    userId = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False)
-    resourceId = db.Column(db.Integer, db.ForeignKey('resources.id'), nullable=False)
-    # Typ sesji treningowej. Możliwe wartości:
-    # diagnosis lub training. Gdzie diagnoza
-    # rozumiana jest jako pierwsza sesja
-    type = db.Column(db.String(50), nullable=False)
-    age = db.Column(db.Integer, nullable=False)
-    startedAt = db.Column(db.String(50), nullable=False)
-    endedAt = db.Column(db.String(50), nullable=False)
+    sessionId = db.Column(db.Integer, primary_key=True) #Identyfikator sesji treningowej.
+    userId = db.Column(db.Integer, db.ForeignKey("users.userId"), nullable=False) #Identyfikator użytkownika.
+    resourceId = db.Column(db.Integer, db.ForeignKey('resources.resourceId'), nullable=False) #Identyfikator zasobu.
+    type = db.Column(db.Enum('diagnosis', 'training'), nullable=False) #Typ sesji treningowej. Możliwe wartości: diagnosis lub training. Gdzie diagnoza rozumiana jest jako pierwsza sesja
+    age = db.Column(db.Integer, nullable=False) #Wiek w czasie rozpoczęcia sesji treningowej.
+    startedAt = db.Column(db.DateTime(), nullable=False) #Data i czas rozpoczęcia sesji treningowej.
+    endedAt = db.Column(db.DateTime(), nullable=False) #Data i czas zakończenia sesji treningowej.
 
 class Resource(db.Model):
     __tablename__ = "resources"
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(50), nullable=False)
-    type = db.Column(db.String(50), nullable=False)
+    resourceId = db.Column(db.Integer, primary_key=True) #Identyfikator zasobu.
+    type = db.Column(db.Enum('image', 'video', 'text', 'audio','other'), nullable=False) #Typ zasobu. Możliwe wartości: image, video, text, audio oraz other.
+    emotions = db.Column(db.Enum('neutral', 'joy', 'disgust', 'surprise', 'fear', 'sadness', 'anger'), nullable=False) #Emocje, które prezentuje zasób.
+    age = db.Column(db.String(50), nullable=True) #Opcjonalne. Wiek osoby pokazanej na zasobie.
+    imageCategory = db.Column(db.Enum('face', 'full-body'), nullable=False) #Opcjonalne, ale wymagane dla obrazów. Kategoria obiektu przedstawianego przez zasób. Możliwe wartości to: face albo full-body.
     training_sessions = db.relationship("Training_Session", backref="resource", lazy=True)
 
+class Training_Session_Result(db.Model):
+    __tablename__ = "training_session_result"
+    resultId = db.Column(db.Integer, primary_key=True) #Identyfikator wyniku ćwiczenia.
+    sessionId = db.Column(db.Integer, db.ForeignKey('training_sessions.sessionId'), nullable=False)
+    resourceId = db.Column(db.Integer, db.ForeignKey('resources.resourceId'), nullable=False)
+    recognizedEmotion = db.Column(db.Enum('neutral', 'joy', 'disgust', 'surprise', 'fear', 'sadness', 'anger'), nullable=False) #Emocja rozpoznawana przez użytkownika.
+    startedAt = db.Column(db.DateTime(), nullable=False) #Data i czas rozpoczęcia sesji treningowej.
+    endedAt = db.Column(db.DateTime(), nullable=False) #Data i czas zakończenia sesji treningowej.
 
 class UserServer(db.Model):
     __tablename__ = "login_validation"
@@ -40,3 +48,4 @@ class UserServer(db.Model):
     username = db.Column(db.String(50), nullable=False)
     password = db.Column(db.String(20), nullable=False)
     type = db.Column(db.Enum('user', 'scientist'))
+    userId = db.Column(db.Integer, db.ForeignKey("users.userId"), nullable=False)

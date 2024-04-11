@@ -7,7 +7,7 @@ def check_picture_ids(jpg_files, json_data):
     return missing_files
 
 folder_path = 'db_files'  # Ścieżka do folderu z plikami
-json_file_path = '\app\\DataFormater\\textformated.json'  # Ścieżka do pliku .json
+json_file_path = 'textformated.json'  # Ścieżka do pliku .json
 
 # Sprawdź, czy folder istnieje
 if not os.path.exists(folder_path):

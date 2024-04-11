@@ -4,8 +4,8 @@
         "Picture ID": "AD_7885.jpg",
         "Male/ Female": "F",
         "Display": "neutral",
-        "Agreement (%)": 10,
-        "Putity (0-1)": "x",
+        "Agreement (%)": 53,
+        "Putity   (0-1)": "x",
         "Intensity (0-1)": "x",
         "N": 17,
         "FACS ": "7B"
@@ -16,7 +16,7 @@
         "Male/ Female": "F",
         "Display": "joy",
         "Agreement (%)": 92,
-        "Putity (0-1)": 0.77,
+        "Putity   (0-1)": 0.77,
         "Intensity (0-1)": 0.72,
         "N": 36,
         "FACS ": "1A+2A+6D+12D+25D+26B"
@@ -27,7 +27,7 @@
         "Male/ Female": "F",
         "Display": "disgust",
         "Agreement (%)": 80,
-        "Putity (0-1)": 0.66,
+        "Putity   (0-1)": 0.66,
         "Intensity (0-1)": 0.73,
         "N": 30,
         "FACS ": "4B+7B+9D+10C+17C+58D"
@@ -38,7 +38,7 @@
         "Male/ Female": "F",
         "Display": "surprise",
         "Agreement (%)": 87,
-        "Putity (0-1)": 0.71,
+        "Putity   (0-1)": 0.71,
         "Intensity (0-1)": 0.77,
         "N": 31,
         "FACS ": "1C+2C+5C+25D+26E+58B"
@@ -49,7 +49,7 @@
         "Male/ Female": "F",
         "Display": "fear",
         "Agreement (%)": 57,
-        "Putity (0-1)": 0.43,
+        "Putity   (0-1)": 0.43,
         "Intensity (0-1)": 0.82,
         "N": 23,
         "FACS ": "1D+2D+5D+25D+26E+58E"
@@ -60,7 +60,7 @@
         "Male/ Female": "F",
         "Display": "sadness",
         "Agreement (%)": 86,
-        "Putity (0-1)": 0.75,
+        "Putity   (0-1)": 0.75,
         "Intensity (0-1)": 0.54,
         "N": 29,
         "FACS ": "15C+17C+43A+54B"
@@ -71,7 +71,7 @@
         "Male/ Female": "F",
         "Display": "anger",
         "Agreement (%)": 97,
-        "Putity (0-1)": 0.81,
+        "Putity   (0-1)": 0.81,
         "Intensity (0-1)": 0.73,
         "N": 29,
         "FACS ": "5C+7D+17B+18C+24D+54B"
@@ -82,7 +82,7 @@
         "Male/ Female": "M",
         "Display": "neutral",
         "Agreement (%)": 65,
-        "Putity (0-1)": "x",
+        "Putity   (0-1)": "x",
         "Intensity (0-1)": "x",
         "N": 17,
         "FACS ": "7B"
@@ -93,7 +93,7 @@
         "Male/ Female": "M",
         "Display": "joy",
         "Agreement (%)": 78,
-        "Putity (0-1)": 0.65,
+        "Putity   (0-1)": 0.65,
         "Intensity (0-1)": 0.7,
         "N": 27,
         "FACS ": "6D+12D+25C+26A"
@@ -104,7 +104,7 @@
         "Male/ Female": "M",
         "Display": "surprise",
         "Agreement (%)": 84,
-        "Putity (0-1)": 0.67,
+        "Putity   (0-1)": 0.67,
         "Intensity (0-1)": 0.71,
         "N": 19,
         "FACS ": "1C+2C+4B+5C+25C+26D"
@@ -115,7 +115,7 @@
         "Male/ Female": "M",
         "Display": "fear",
         "Agreement (%)": 60,
-        "Putity (0-1)": 0.49,
+        "Putity   (0-1)": 0.49,
         "Intensity (0-1)": 0.82,
         "N": 20,
         "FACS ": "1D+2D+4C+5D+20D+25D+26B"
@@ -126,7 +126,7 @@
         "Male/ Female": "M",
         "Display": "disgust",
         "Agreement (%)": 96,
-        "Putity (0-1)": 0.86,
+        "Putity   (0-1)": 0.86,
         "Intensity (0-1)": 0.74,
         "N": 27,
         "FACS ": "4C+7B+9D+15A+17B+L25A"
@@ -137,7 +137,7 @@
         "Male/ Female": "M",
         "Display": "anger",
         "Agreement (%)": 86,
-        "Putity (0-1)": 0.73,
+        "Putity   (0-1)": 0.73,
         "Intensity (0-1)": 0.74,
         "N": 35,
         "FACS ": "4D+5D+17D+24C+38C+54A"
@@ -148,7 +148,7 @@
         "Male/ Female": "M",
         "Display": "sadness",
         "Agreement (%)": 100,
-        "Putity (0-1)": 0.92,
+        "Putity   (0-1)": 0.92,
         "Intensity (0-1)": 0.71,
         "N": 16,
         "FACS ": "1A+17B"
@@ -159,7 +159,7 @@
         "Male/ Female": "M",
         "Display": "neutral",
         "Agreement (%)": 71,
-        "Putity (0-1)": "x",
+        "Putity   (0-1)": "x",
         "Intensity (0-1)": "x",
         "N": 24,
         "FACS ": 0
@@ -170,7 +170,7 @@
         "Male/ Female": "M",
         "Display": "joy",
         "Agreement (%)": 85,
-        "Putity (0-1)": 0.69,
+        "Putity   (0-1)": 0.69,
         "Intensity (0-1)": 0.65,
         "N": 34,
         "FACS ": "6E+12E+25C+26A"
@@ -181,7 +181,7 @@
         "Male/ Female": "M",
         "Display": "surprise",
         "Agreement (%)": 76,
-        "Putity (0-1)": 0.61,
+        "Putity   (0-1)": 0.61,
         "Intensity (0-1)": 0.82,
         "N": 21,
         "FACS ": "1E+2E+5E+25C+26E"
@@ -192,7 +192,7 @@
         "Male/ Female": "M",
         "Display": "disgust",
         "Agreement (%)": 91,
-        "Putity (0-1)": 0.75,
+        "Putity   (0-1)": 0.75,
         "Intensity (0-1)": 0.57,
         "N": 22,
         "FACS ": "4B+9C+17B+25A"
@@ -203,7 +203,7 @@
         "Male/ Female": "M",
         "Display": "fear",
         "Agreement (%)": 72,
-        "Putity (0-1)": 0.58,
+        "Putity   (0-1)": 0.58,
         "Intensity (0-1)": 0.72,
         "N": 21,
         "FACS ": "1B+2B+5E+20C+25D+26E+38B+58C"
@@ -214,7 +214,7 @@
         "Male/ Female": "M",
         "Display": "anger",
         "Agreement (%)": 100,
-        "Putity (0-1)": 0.89,
+        "Putity   (0-1)": 0.89,
         "Intensity (0-1)": 0.73,
         "N": 24,
         "FACS ": "4C+5C+23C+24C"
@@ -225,7 +225,7 @@
         "Male/ Female": "M",
         "Display": "sadness",
         "Agreement (%)": 85,
-        "Putity (0-1)": 0.71,
+        "Putity   (0-1)": 0.71,
         "Intensity (0-1)": 0.56,
         "N": 20,
         "FACS ": "4A+5C+17D"
@@ -236,7 +236,7 @@
         "Male/ Female": "M",
         "Display": "neutral",
         "Agreement (%)": 40,
-        "Putity (0-1)": "x",
+        "Putity   (0-1)": "x",
         "Intensity (0-1)": "x",
         "N": 20,
         "FACS ": "7B"
@@ -247,7 +247,7 @@
         "Male/ Female": "M",
         "Display": "joy",
         "Agreement (%)": 93,
-        "Putity (0-1)": 0.8,
+        "Putity   (0-1)": 0.8,
         "Intensity (0-1)": 0.69,
         "N": 29,
         "FACS ": "6D+12D+25D"
@@ -258,7 +258,7 @@
         "Male/ Female": "M",
         "Display": "disgust",
         "Agreement (%)": 81,
-        "Putity (0-1)": 0.71,
+        "Putity   (0-1)": 0.71,
         "Intensity (0-1)": 0.67,
         "N": 26,
         "FACS ": "9D+17B"
@@ -269,7 +269,7 @@
         "Male/ Female": "M",
         "Display": "anger",
         "Agreement (%)": 79,
-        "Putity (0-1)": 0.68,
+        "Putity   (0-1)": 0.68,
         "Intensity (0-1)": 0.68,
         "N": 29,
         "FACS ": "4D+5B+17C+23C+24C+38B"
@@ -280,7 +280,7 @@
         "Male/ Female": "M",
         "Display": "surprise",
         "Agreement (%)": 94,
-        "Putity (0-1)": 0.84,
+        "Putity   (0-1)": 0.84,
         "Intensity (0-1)": 0.78,
         "N": 32,
         "FACS ": "1B+2B+5A+25C+26D"
@@ -291,7 +291,7 @@
         "Male/ Female": "M",
         "Display": "fear",
         "Agreement (%)": 87,
-        "Putity (0-1)": 0.75,
+        "Putity   (0-1)": 0.75,
         "Intensity (0-1)": 0.83,
         "N": 15,
         "FACS ": "1C+2C+4B+5C+17B+20B+25B+58B"
@@ -302,7 +302,7 @@
         "Male/ Female": "M",
         "Display": "sadness",
         "Agreement (%)": 93,
-        "Putity (0-1)": 0.86,
+        "Putity   (0-1)": 0.86,
         "Intensity (0-1)": 0.7,
         "N": 27,
         "FACS ": "1B+4B+11A+17A"
@@ -313,7 +313,7 @@
         "Male/ Female": "M",
         "Display": "joy",
         "Agreement (%)": 93,
-        "Putity (0-1)": 0.84,
+        "Putity   (0-1)": 0.84,
         "Intensity (0-1)": 0.67,
         "N": 15,
         "FACS ": "6C+7B+12D+25C"
@@ -324,7 +324,7 @@
         "Male/ Female": "M",
         "Display": "disgust",
         "Agreement (%)": 100,
-        "Putity (0-1)": 0.91,
+        "Putity   (0-1)": 0.91,
         "Intensity (0-1)": 0.69,
         "N": 23,
         "FACS ": "4D+6B+7D+10C+17A+25A"
@@ -335,7 +335,7 @@
         "Male/ Female": "M",
         "Display": "neutral",
         "Agreement (%)": 80,
-        "Putity (0-1)": "x",
+        "Putity   (0-1)": "x",
         "Intensity (0-1)": "x",
         "N": 15,
         "FACS ": 0
@@ -346,7 +346,7 @@
         "Male/ Female": "M",
         "Display": "surprise",
         "Agreement (%)": 86,
-        "Putity (0-1)": 0.66,
+        "Putity   (0-1)": 0.66,
         "Intensity (0-1)": 0.75,
         "N": 14,
         "FACS ": "1B+2B+5D+25C+26B"
@@ -357,7 +357,7 @@
         "Male/ Female": "M",
         "Display": "fear",
         "Agreement (%)": 63,
-        "Putity (0-1)": 0.52,
+        "Putity   (0-1)": 0.52,
         "Intensity (0-1)": 0.72,
         "N": 16,
         "FACS ": "1D+2D+5C+16B+25D+39C"
@@ -368,7 +368,7 @@
         "Male/ Female": "M",
         "Display": "sadness",
         "Agreement (%)": 90,
-        "Putity (0-1)": 0.73,
+        "Putity   (0-1)": 0.73,
         "Intensity (0-1)": 0.56,
         "N": 10,
         "FACS ": "1A+4A+15B+17B"
@@ -379,7 +379,7 @@
         "Male/ Female": "M",
         "Display": "anger",
         "Agreement (%)": 67,
-        "Putity (0-1)": 0.56,
+        "Putity   (0-1)": 0.56,
         "Intensity (0-1)": 0.71,
         "N": 21,
         "FACS ": "4A+5B+7B+10D+15D+17D+23E"
@@ -390,7 +390,7 @@
         "Male/ Female": "F",
         "Display": "neutral",
         "Agreement (%)": 84,
-        "Putity (0-1)": "x",
+        "Putity   (0-1)": "x",
         "Intensity (0-1)": "x",
         "N": 19,
         "FACS ": 0
@@ -401,7 +401,7 @@
         "Male/ Female": "F",
         "Display": "joy",
         "Agreement (%)": 88,
-        "Putity (0-1)": 0.67,
+        "Putity   (0-1)": 0.67,
         "Intensity (0-1)": 0.49,
         "N": 25,
         "FACS ": "6C+12D+25C"
@@ -412,7 +412,7 @@
         "Male/ Female": "F",
         "Display": "surprise",
         "Agreement (%)": 83,
-        "Putity (0-1)": 0.66,
+        "Putity   (0-1)": 0.66,
         "Intensity (0-1)": 0.71,
         "N": 23,
         "FACS ": "R1C+5C+25C+26B"
@@ -423,7 +423,7 @@
         "Male/ Female": "F",
         "Display": "disgust",
         "Agreement (%)": 83,
-        "Putity (0-1)": 0.68,
+        "Putity   (0-1)": 0.68,
         "Intensity (0-1)": 0.7,
         "N": 30,
         "FACS ": "7B+9D+17C+25A"
@@ -434,7 +434,7 @@
         "Male/ Female": "F",
         "Display": "fear",
         "Agreement (%)": 74,
-        "Putity (0-1)": 0.65,
+        "Putity   (0-1)": 0.65,
         "Intensity (0-1)": 0.83,
         "N": 23,
         "FACS ": "1A+4B+5E+25D+26C"
@@ -445,7 +445,7 @@
         "Male/ Female": "F",
         "Display": "anger",
         "Agreement (%)": 96,
-        "Putity (0-1)": 0.77,
+        "Putity   (0-1)": 0.77,
         "Intensity (0-1)": 0.66,
         "N": 23,
         "FACS ": "4C+5B+11C+17E+24D+28"
@@ -456,7 +456,7 @@
         "Male/ Female": "F",
         "Display": "sadness",
         "Agreement (%)": 90,
-        "Putity (0-1)": 0.86,
+        "Putity   (0-1)": 0.86,
         "Intensity (0-1)": 0.44,
         "N": 20,
         "FACS ": "15D+17C"
@@ -467,7 +467,7 @@
         "Male/ Female": "M",
         "Display": "neutral",
         "Agreement (%)": 57,
-        "Putity (0-1)": "x",
+        "Putity   (0-1)": "x",
         "Intensity (0-1)": "x",
         "N": 21,
         "FACS ": "7A+12A"
@@ -478,7 +478,7 @@
         "Male/ Female": "M",
         "Display": "joy",
         "Agreement (%)": 90,
-        "Putity (0-1)": 0.78,
+        "Putity   (0-1)": 0.78,
         "Intensity (0-1)": 0.78,
         "N": 31,
         "FACS ": "6E+12E+25D"
@@ -489,7 +489,7 @@
         "Male/ Female": "M",
         "Display": "disgust",
         "Agreement (%)": 90,
-        "Putity (0-1)": 0.74,
+        "Putity   (0-1)": 0.74,
         "Intensity (0-1)": 0.72,
         "N": 21,
         "FACS ": "6D+9E+17D+25B"
@@ -500,7 +500,7 @@
         "Male/ Female": "M",
         "Display": "surprise",
         "Agreement (%)": 96,
-        "Putity (0-1)": 0.81,
+        "Putity   (0-1)": 0.81,
         "Intensity (0-1)": 0.7,
         "N": 28,
         "FACS ": "1E+2E+5D+25C+26B"
@@ -511,7 +511,7 @@
         "Male/ Female": "M",
         "Display": "fear",
         "Agreement (%)": 74,
-        "Putity (0-1)": 0.64,
+        "Putity   (0-1)": 0.64,
         "Intensity (0-1)": 0.75,
         "N": 34,
         "FACS ": "1C+2D+5C+10C+20C+25D"
@@ -522,7 +522,7 @@
         "Male/ Female": "M",
         "Display": "anger",
         "Agreement (%)": 91,
-        "Putity (0-1)": 0.74,
+        "Putity   (0-1)": 0.74,
         "Intensity (0-1)": 0.71,
         "N": 33,
         "FACS ": "5B+10B+17C+24C"
@@ -533,7 +533,7 @@
         "Male/ Female": "M",
         "Display": "sadness",
         "Agreement (%)": 89,
-        "Putity (0-1)": 0.85,
+        "Putity   (0-1)": 0.85,
         "Intensity (0-1)": 0.62,
         "N": 19,
         "FACS ": "1A+4A+5A+15B+17D"
@@ -544,7 +544,7 @@
         "Male/ Female": "F",
         "Display": "neutral",
         "Agreement (%)": 65,
-        "Putity (0-1)": "x",
+        "Putity   (0-1)": "x",
         "Intensity (0-1)": "x",
         "N": 26,
         "FACS ": 0
@@ -555,7 +555,7 @@
         "Male/ Female": "F",
         "Display": "joy",
         "Agreement (%)": 83,
-        "Putity (0-1)": 0.71,
+        "Putity   (0-1)": 0.71,
         "Intensity (0-1)": 0.62,
         "N": 30,
         "FACS ": "6B+12D+25B"
@@ -566,7 +566,7 @@
         "Male/ Female": "F",
         "Display": "surprise",
         "Agreement (%)": 92,
-        "Putity (0-1)": 0.69,
+        "Putity   (0-1)": 0.69,
         "Intensity (0-1)": 0.73,
         "N": 26,
         "FACS ": "1B+2C+5D+25C+26B"
@@ -577,7 +577,7 @@
         "Male/ Female": "F",
         "Display": "disgust",
         "Agreement (%)": 84,
-        "Putity (0-1)": 0.75,
+        "Putity   (0-1)": 0.75,
         "Intensity (0-1)": 0.6,
         "N": 25,
         "FACS ": "4D+6B+7D+9D+23D"
@@ -588,7 +588,7 @@
         "Male/ Female": "F",
         "Display": "fear",
         "Agreement (%)": 63,
-        "Putity (0-1)": 0.52,
+        "Putity   (0-1)": 0.52,
         "Intensity (0-1)": 0.72,
         "N": 19,
         "FACS ": "4B+5D+17B+21+25C"
@@ -599,7 +599,7 @@
         "Male/ Female": "F",
         "Display": "anger",
         "Agreement (%)": 85,
-        "Putity (0-1)": 0.71,
+        "Putity   (0-1)": 0.71,
         "Intensity (0-1)": 0.67,
         "N": 27,
         "FACS ": "24E"
@@ -610,7 +610,7 @@
         "Male/ Female": "F",
         "Display": "sadness",
         "Agreement (%)": 95,
-        "Putity (0-1)": 0.83,
+        "Putity   (0-1)": 0.83,
         "Intensity (0-1)": 0.69,
         "N": 19,
         "FACS ": "1C+4B+15C+17B"
@@ -621,7 +621,7 @@
         "Male/ Female": "M",
         "Display": "neutral",
         "Agreement (%)": 59,
-        "Putity (0-1)": "x",
+        "Putity   (0-1)": "x",
         "Intensity (0-1)": "x",
         "N": 17,
         "FACS ": "7B+25B"
@@ -632,7 +632,7 @@
         "Male/ Female": "M",
         "Display": "joy",
         "Agreement (%)": 94,
-        "Putity (0-1)": 0.79,
+        "Putity   (0-1)": 0.79,
         "Intensity (0-1)": 0.74,
         "N": 31,
         "FACS ": "6D+12E+25E"
@@ -643,7 +643,7 @@
         "Male/ Female": "M",
         "Display": "anger",
         "Agreement (%)": 89,
-        "Putity (0-1)": 0.82,
+        "Putity   (0-1)": 0.82,
         "Intensity (0-1)": 0.73,
         "N": 28,
         "FACS ": "4E+6B+7B+17D+23D+24B"
@@ -654,7 +654,7 @@
         "Male/ Female": "M",
         "Display": "sadness",
         "Agreement (%)": 74,
-        "Putity (0-1)": 0.63,
+        "Putity   (0-1)": 0.63,
         "Intensity (0-1)": 0.62,
         "N": 23,
         "FACS ": "1B+15D+17C"
@@ -665,7 +665,7 @@
         "Male/ Female": "M",
         "Display": "disgust",
         "Agreement (%)": 89,
-        "Putity (0-1)": 0.78,
+        "Putity   (0-1)": 0.78,
         "Intensity (0-1)": 0.66,
         "N": 36,
         "FACS ": "1C+2C+6D+7B+9E+17D"
@@ -676,7 +676,7 @@
         "Male/ Female": "M",
         "Display": "surprise",
         "Agreement (%)": 100,
-        "Putity (0-1)": 0.89,
+        "Putity   (0-1)": 0.89,
         "Intensity (0-1)": 0.77,
         "N": 28,
         "FACS ": "1C+2E+5E+25D+26D"
@@ -687,7 +687,7 @@
         "Male/ Female": "M",
         "Display": "fear",
         "Agreement (%)": 75,
-        "Putity (0-1)": 0.63,
+        "Putity   (0-1)": 0.63,
         "Intensity (0-1)": 0.77,
         "N": 24,
         "FACS ": "1D+2E+5E+20C+25D+38C"
@@ -698,7 +698,7 @@
         "Male/ Female": "F",
         "Display": "neutral",
         "Agreement (%)": 78,
-        "Putity (0-1)": "x",
+        "Putity   (0-1)": "x",
         "Intensity (0-1)": "x",
         "N": 27,
         "FACS ": 0
@@ -709,7 +709,7 @@
         "Male/ Female": "F",
         "Display": "anger",
         "Agreement (%)": 79,
-        "Putity (0-1)": 0.65,
+        "Putity   (0-1)": 0.65,
         "Intensity (0-1)": 0.63,
         "N": 28,
         "FACS ": "1B+4C+7D+17D+23E"
@@ -720,7 +720,7 @@
         "Male/ Female": "F",
         "Display": "joy",
         "Agreement (%)": 84,
-        "Putity (0-1)": 0.77,
+        "Putity   (0-1)": 0.77,
         "Intensity (0-1)": 0.77,
         "N": 38,
         "FACS ": "6E+12D+25D"
@@ -731,7 +731,7 @@
         "Male/ Female": "F",
         "Display": "disgust",
         "Agreement (%)": 94,
-        "Putity (0-1)": 0.81,
+        "Putity   (0-1)": 0.81,
         "Intensity (0-1)": 0.7,
         "N": 34,
         "FACS ": "4D+6D+7E+9E+25D"
@@ -742,7 +742,7 @@
         "Male/ Female": "F",
         "Display": "surprise",
         "Agreement (%)": 89,
-        "Putity (0-1)": 0.77,
+        "Putity   (0-1)": 0.77,
         "Intensity (0-1)": 0.68,
         "N": 35,
         "FACS ": "5D+25B"
@@ -753,7 +753,7 @@
         "Male/ Female": "F",
         "Display": "sadness",
         "Agreement (%)": 82,
-        "Putity (0-1)": 0.77,
+        "Putity   (0-1)": 0.77,
         "Intensity (0-1)": 0.57,
         "N": 17,
         "FACS ": "7A+11B+15B+17C"
@@ -764,7 +764,7 @@
         "Male/ Female": "F",
         "Display": "fear",
         "Agreement (%)": 72,
-        "Putity (0-1)": 0.55,
+        "Putity   (0-1)": 0.55,
         "Intensity (0-1)": 0.75,
         "N": 18,
         "FACS ": "1C+4D+5E+20B+25C+38"
@@ -775,7 +775,7 @@
         "Male/ Female": "F",
         "Display": "joy",
         "Agreement (%)": 97,
-        "Putity (0-1)": 0.79,
+        "Putity   (0-1)": 0.79,
         "Intensity (0-1)": 0.72,
         "N": 29,
         "FACS ": "6C+12D+25E"
@@ -786,7 +786,7 @@
         "Male/ Female": "F",
         "Display": "neutral",
         "Agreement (%)": 94,
-        "Putity (0-1)": "x",
+        "Putity   (0-1)": "x",
         "Intensity (0-1)": "x",
         "N": 17,
         "FACS ": "10A"
@@ -797,7 +797,7 @@
         "Male/ Female": "F",
         "Display": "surprise",
         "Agreement (%)": 80,
-        "Putity (0-1)": 0.73,
+        "Putity   (0-1)": 0.73,
         "Intensity (0-1)": 0.74,
         "N": 20,
         "FACS ": "1E+2D+5D+25D+26C"
@@ -808,7 +808,7 @@
         "Male/ Female": "F",
         "Display": "disgust",
         "Agreement (%)": 94,
-        "Putity (0-1)": 0.81,
+        "Putity   (0-1)": 0.81,
         "Intensity (0-1)": 0.71,
         "N": 35,
         "FACS ": "9E+17D"
@@ -819,7 +819,7 @@
         "Male/ Female": "F",
         "Display": "anger",
         "Agreement (%)": 100,
-        "Putity (0-1)": 0.83,
+        "Putity   (0-1)": 0.83,
         "Intensity (0-1)": 0.71,
         "N": 28,
         "FACS ": "4D+11B+17D+24D"
@@ -830,7 +830,7 @@
         "Male/ Female": "F",
         "Display": "sadness",
         "Agreement (%)": 48,
-        "Putity (0-1)": 0.4,
+        "Putity   (0-1)": 0.4,
         "Intensity (0-1)": 0.66,
         "N": 21,
         "FACS ": "1B+4B+7C+11B+15C"
@@ -841,7 +841,7 @@
         "Male/ Female": "F",
         "Display": "fear",
         "Agreement (%)": 84,
-        "Putity (0-1)": 0.72,
+        "Putity   (0-1)": 0.72,
         "Intensity (0-1)": 0.84,
         "N": 19,
         "FACS ": "1D+2C+4B+5E+20E+21+25D+38C"
@@ -852,7 +852,7 @@
         "Male/ Female": "F",
         "Display": "surprise",
         "Agreement (%)": 96,
-        "Putity (0-1)": 0.9,
+        "Putity   (0-1)": 0.9,
         "Intensity (0-1)": 0.77,
         "N": 27,
         "FACS ": "1D+2D+5D+25D+26C"
@@ -863,7 +863,7 @@
         "Male/ Female": "F",
         "Display": "fear",
         "Agreement (%)": 82,
-        "Putity (0-1)": 0.67,
+        "Putity   (0-1)": 0.67,
         "Intensity (0-1)": 0.8,
         "N": 28,
         "FACS ": "1E+4C+5E+11B+25E+26B"
@@ -874,7 +874,7 @@
         "Male/ Female": "F",
         "Display": "disgust",
         "Agreement (%)": 100,
-        "Putity (0-1)": 0.78,
+        "Putity   (0-1)": 0.78,
         "Intensity (0-1)": 0.8,
         "N": 29,
         "FACS ": "7C+9E+17C+21"
@@ -885,7 +885,7 @@
         "Male/ Female": "F",
         "Display": "sadness",
         "Agreement (%)": 100,
-        "Putity (0-1)": 0.87,
+        "Putity   (0-1)": 0.87,
         "Intensity (0-1)": 0.62,
         "N": 22,
         "FACS ": "1B+7C+11C+15C"
@@ -896,7 +896,7 @@
         "Male/ Female": "F",
         "Display": "neutral",
         "Agreement (%)": 63,
-        "Putity (0-1)": "x",
+        "Putity   (0-1)": "x",
         "Intensity (0-1)": "x",
         "N": 27,
         "FACS ": 0
@@ -907,7 +907,7 @@
         "Male/ Female": "F",
         "Display": "anger",
         "Agreement (%)": 76,
-        "Putity (0-1)": 0.67,
+        "Putity   (0-1)": 0.67,
         "Intensity (0-1)": 0.73,
         "N": 42,
         "FACS ": "4B+15D+17D+23D"
@@ -918,7 +918,7 @@
         "Male/ Female": "F",
         "Display": "joy",
         "Agreement (%)": 72,
-        "Putity (0-1)": 0.55,
+        "Putity   (0-1)": 0.55,
         "Intensity (0-1)": 0.53,
         "N": 25,
         "FACS ": "6D+12D"
@@ -929,7 +929,7 @@
         "Male/ Female": "F",
         "Display": "neutral",
         "Agreement (%)": 68,
-        "Putity (0-1)": "x",
+        "Putity   (0-1)": "x",
         "Intensity (0-1)": "x",
         "N": 25,
         "FACS ": 0
@@ -940,7 +940,7 @@
         "Male/ Female": "F",
         "Display": "joy",
         "Agreement (%)": 100,
-        "Putity (0-1)": 0.8,
+        "Putity   (0-1)": 0.8,
         "Intensity (0-1)": 0.77,
         "N": 31,
         "FACS ": "6D+12E+25E"
@@ -951,7 +951,7 @@
         "Male/ Female": "F",
         "Display": "surprise",
         "Agreement (%)": 86,
-        "Putity (0-1)": 0.7,
+        "Putity   (0-1)": 0.7,
         "Intensity (0-1)": 0.75,
         "N": 21,
         "FACS ": "1D+2E+5D+25C+26B"
@@ -962,7 +962,7 @@
         "Male/ Female": "F",
         "Display": "fear",
         "Agreement (%)": 74,
-        "Putity (0-1)": 0.61,
+        "Putity   (0-1)": 0.61,
         "Intensity (0-1)": 0.81,
         "N": 31,
         "FACS ": "2B+5D+20D+25C"
@@ -973,7 +973,7 @@
         "Male/ Female": "F",
         "Display": "anger",
         "Agreement (%)": 85,
-        "Putity (0-1)": 0.71,
+        "Putity   (0-1)": 0.71,
         "Intensity (0-1)": 0.66,
         "N": 13,
         "FACS ": "4D+5C+17C+23E"
@@ -984,7 +984,7 @@
         "Male/ Female": "F",
         "Display": "disgust",
         "Agreement (%)": 93,
-        "Putity (0-1)": 0.85,
+        "Putity   (0-1)": 0.85,
         "Intensity (0-1)": 0.83,
         "N": 30,
         "FACS ": "4C+7B+9E+21+25D"
@@ -995,7 +995,7 @@
         "Male/ Female": "F",
         "Display": "sadness",
         "Agreement (%)": 100,
-        "Putity (0-1)": 0.88,
+        "Putity   (0-1)": 0.88,
         "Intensity (0-1)": 0.7,
         "N": 21,
         "FACS ": "1A+4A+15C+17B"
@@ -1006,7 +1006,7 @@
         "Male/ Female": "M",
         "Display": "joy",
         "Agreement (%)": 92,
-        "Putity (0-1)": 0.78,
+        "Putity   (0-1)": 0.78,
         "Intensity (0-1)": 0.74,
         "N": 36,
         "FACS ": "6D+7B+12D+25D"
@@ -1017,7 +1017,7 @@
         "Male/ Female": "M",
         "Display": "neutral",
         "Agreement (%)": 76,
-        "Putity (0-1)": "x",
+        "Putity   (0-1)": "x",
         "Intensity (0-1)": "x",
         "N": 17,
         "FACS ": 0
@@ -1028,7 +1028,7 @@
         "Male/ Female": "M",
         "Display": "sadness",
         "Agreement (%)": 95,
-        "Putity (0-1)": 0.84,
+        "Putity   (0-1)": 0.84,
         "Intensity (0-1)": 0.78,
         "N": 19,
         "FACS ": "1E+4D+7B+17D"
@@ -1039,7 +1039,7 @@
         "Male/ Female": "M",
         "Display": "disgust",
         "Agreement (%)": 97,
-        "Putity (0-1)": 0.86,
+        "Putity   (0-1)": 0.86,
         "Intensity (0-1)": 0.65,
         "N": 33,
         "FACS ": "7C+9E+25C"
@@ -1050,7 +1050,7 @@
         "Male/ Female": "M",
         "Display": "surprise",
         "Agreement (%)": 92,
-        "Putity (0-1)": 0.81,
+        "Putity   (0-1)": 0.81,
         "Intensity (0-1)": 0.66,
         "N": 24,
         "FACS ": "1D+2C+5D+25C+26C"
@@ -1061,7 +1061,7 @@
         "Male/ Female": "M",
         "Display": "fear",
         "Agreement (%)": 77,
-        "Putity (0-1)": 0.62,
+        "Putity   (0-1)": 0.62,
         "Intensity (0-1)": 0.61,
         "N": 22,
         "FACS ": "1C+4C+25C"
@@ -1072,7 +1072,7 @@
         "Male/ Female": "M",
         "Display": "anger",
         "Agreement (%)": 88,
-        "Putity (0-1)": 0.79,
+        "Putity   (0-1)": 0.79,
         "Intensity (0-1)": 0.58,
         "N": 26,
         "FACS ": "4D+L11C+15C+17D+24D"
@@ -1083,7 +1083,7 @@
         "Male/ Female": "F",
         "Display": "joy",
         "Agreement (%)": 78,
-        "Putity (0-1)": 0.68,
+        "Putity   (0-1)": 0.68,
         "Intensity (0-1)": 0.65,
         "N": 23,
         "FACS ": "6D+12E+25C"
@@ -1094,7 +1094,7 @@
         "Male/ Female": "F",
         "Display": "anger",
         "Agreement (%)": 97,
-        "Putity (0-1)": 0.82,
+        "Putity   (0-1)": 0.82,
         "Intensity (0-1)": 0.66,
         "N": 31,
         "FACS ": "4D+7C+11C+23D"
@@ -1105,7 +1105,7 @@
         "Male/ Female": "F",
         "Display": "fear",
         "Agreement (%)": 42,
-        "Putity (0-1)": 0.34,
+        "Putity   (0-1)": 0.34,
         "Intensity (0-1)": 0.73,
         "N": 26,
         "FACS ": "1D+2C+4C+5C+7B+11C+20B+25C"
@@ -1116,7 +1116,7 @@
         "Male/ Female": "F",
         "Display": "surprise",
         "Agreement (%)": 92,
-        "Putity (0-1)": 0.75,
+        "Putity   (0-1)": 0.75,
         "Intensity (0-1)": 0.74,
         "N": 26,
         "FACS ": "1B+R2C+5C+25D+26C"
@@ -1127,7 +1127,7 @@
         "Male/ Female": "F",
         "Display": "neutral",
         "Agreement (%)": 48,
-        "Putity (0-1)": "x",
+        "Putity   (0-1)": "x",
         "Intensity (0-1)": "x",
         "N": 23,
         "FACS ": 0
@@ -1138,7 +1138,7 @@
         "Male/ Female": "F",
         "Display": "disgust",
         "Agreement (%)": 92,
-        "Putity (0-1)": 0.75,
+        "Putity   (0-1)": 0.75,
         "Intensity (0-1)": 0.78,
         "N": 36,
         "FACS ": "4C+6C+9E+17D+19+25C"
@@ -1149,7 +1149,7 @@
         "Male/ Female": "F",
         "Display": "sadness",
         "Agreement (%)": 88,
-        "Putity (0-1)": 0.71,
+        "Putity   (0-1)": 0.71,
         "Intensity (0-1)": 0.72,
         "N": 26,
         "FACS ": "1D+4D+7C+15E+17B"
@@ -1160,7 +1160,7 @@
         "Male/ Female": "M",
         "Display": "neutral",
         "Agreement (%)": 58,
-        "Putity (0-1)": "x",
+        "Putity   (0-1)": "x",
         "Intensity (0-1)": "x",
         "N": 24,
         "FACS ": "12A"
@@ -1171,7 +1171,7 @@
         "Male/ Female": "M",
         "Display": "joy",
         "Agreement (%)": 76,
-        "Putity (0-1)": 0.58,
+        "Putity   (0-1)": 0.58,
         "Intensity (0-1)": 0.61,
         "N": 29,
         "FACS ": "12D+25B"
@@ -1182,7 +1182,7 @@
         "Male/ Female": "M",
         "Display": "anger",
         "Agreement (%)": 82,
-        "Putity (0-1)": 0.64,
+        "Putity   (0-1)": 0.64,
         "Intensity (0-1)": 0.63,
         "N": 33,
         "FACS ": "4D+7B+23D"
@@ -1193,7 +1193,7 @@
         "Male/ Female": "M",
         "Display": "surprise",
         "Agreement (%)": 95,
-        "Putity (0-1)": 0.86,
+        "Putity   (0-1)": 0.86,
         "Intensity (0-1)": 0.8,
         "N": 20,
         "FACS ": "1E+2E+5D+25D+26B"
@@ -1204,7 +1204,7 @@
         "Male/ Female": "M",
         "Display": "sadness",
         "Agreement (%)": 86,
-        "Putity (0-1)": 0.76,
+        "Putity   (0-1)": 0.76,
         "Intensity (0-1)": 0.47,
         "N": 21,
         "FACS ": "1D+4C+15C"
@@ -1215,7 +1215,7 @@
         "Male/ Female": "M",
         "Display": "fear",
         "Agreement (%)": 63,
-        "Putity (0-1)": 0.53,
+        "Putity   (0-1)": 0.53,
         "Intensity (0-1)": 0.76,
         "N": 24,
         "FACS ": "1E+2E+5E+20B+25C"
@@ -1226,7 +1226,7 @@
         "Male/ Female": "M",
         "Display": "disgust",
         "Agreement (%)": 84,
-        "Putity (0-1)": 0.71,
+        "Putity   (0-1)": 0.71,
         "Intensity (0-1)": 0.69,
         "N": 32,
         "FACS ": "4D+L7D+9E+17C"
@@ -1237,7 +1237,7 @@
         "Male/ Female": "F",
         "Display": "neutral",
         "Agreement (%)": 63,
-        "Putity (0-1)": "x",
+        "Putity   (0-1)": "x",
         "Intensity (0-1)": "x",
         "N": 27,
         "FACS ": 0
@@ -1248,7 +1248,7 @@
         "Male/ Female": "F",
         "Display": "joy",
         "Agreement (%)": 97,
-        "Putity (0-1)": 0.81,
+        "Putity   (0-1)": 0.81,
         "Intensity (0-1)": 0.74,
         "N": 38,
         "FACS ": "6E+7C+12E+16C+25E"
@@ -1259,7 +1259,7 @@
         "Male/ Female": "F",
         "Display": "disgust",
         "Agreement (%)": 89,
-        "Putity (0-1)": 0.79,
+        "Putity   (0-1)": 0.79,
         "Intensity (0-1)": 0.76,
         "N": 19,
         "FACS ": "6C+7C+9E+17C"
@@ -1270,7 +1270,7 @@
         "Male/ Female": "F",
         "Display": "anger",
         "Agreement (%)": 95,
-        "Putity (0-1)": 0.8,
+        "Putity   (0-1)": 0.8,
         "Intensity (0-1)": 0.6,
         "N": 20,
         "FACS ": "4E+7C+17C+24D"
@@ -1281,7 +1281,7 @@
         "Male/ Female": "F",
         "Display": "fear",
         "Agreement (%)": 56,
-        "Putity (0-1)": 0.46,
+        "Putity   (0-1)": 0.46,
         "Intensity (0-1)": 0.71,
         "N": 27,
         "FACS ": "1C+R2D+5D+20C+25C"
@@ -1292,7 +1292,7 @@
         "Male/ Female": "F",
         "Display": "surprise",
         "Agreement (%)": 81,
-        "Putity (0-1)": 0.76,
+        "Putity   (0-1)": 0.76,
         "Intensity (0-1)": 0.74,
         "N": 32,
         "FACS ": "1D+2E+5E+25D+26C"
@@ -1303,7 +1303,7 @@
         "Male/ Female": "F",
         "Display": "sadness",
         "Agreement (%)": 100,
-        "Putity (0-1)": 0.9,
+        "Putity   (0-1)": 0.9,
         "Intensity (0-1)": 0.72,
         "N": 23,
         "FACS ": "1D+4C+15C"
@@ -1314,7 +1314,7 @@
         "Male/ Female": "F",
         "Display": "neutral",
         "Agreement (%)": 67,
-        "Putity (0-1)": "x",
+        "Putity   (0-1)": "x",
         "Intensity (0-1)": "x",
         "N": 21,
         "FACS ": "L12A"
@@ -1325,7 +1325,7 @@
         "Male/ Female": "F",
         "Display": "joy",
         "Agreement (%)": 68,
-        "Putity (0-1)": 0.53,
+        "Putity   (0-1)": 0.53,
         "Intensity (0-1)": 0.62,
         "N": 25,
         "FACS ": "6B+12D+25B"
@@ -1336,7 +1336,7 @@
         "Male/ Female": "F",
         "Display": "surprise",
         "Agreement (%)": 86,
-        "Putity (0-1)": 0.76,
+        "Putity   (0-1)": 0.76,
         "Intensity (0-1)": 0.71,
         "N": 25,
         "FACS ": "1E+2E+25C"
@@ -1347,7 +1347,7 @@
         "Male/ Female": "F",
         "Display": "fear",
         "Agreement (%)": 79,
-        "Putity (0-1)": 0.65,
+        "Putity   (0-1)": 0.65,
         "Intensity (0-1)": 0.76,
         "N": 29,
         "FACS ": "1D+2E+4C+5C+11B+20C+25B"
@@ -1358,7 +1358,7 @@
         "Male/ Female": "F",
         "Display": "disgust",
         "Agreement (%)": 100,
-        "Putity (0-1)": 0.88,
+        "Putity   (0-1)": 0.88,
         "Intensity (0-1)": 0.78,
         "N": 22,
         "FACS ": "7D+9E+17E+25A"
@@ -1369,7 +1369,7 @@
         "Male/ Female": "F",
         "Display": "anger",
         "Agreement (%)": 93,
-        "Putity (0-1)": 0.66,
+        "Putity   (0-1)": 0.66,
         "Intensity (0-1)": 0.64,
         "N": 15,
         "FACS ": "7C+17D+23C"
@@ -1380,7 +1380,7 @@
         "Male/ Female": "F",
         "Display": "sadness",
         "Agreement (%)": 97,
-        "Putity (0-1)": 0.8,
+        "Putity   (0-1)": 0.8,
         "Intensity (0-1)": 0.69,
         "N": 35,
         "FACS ": "1D+4B+15C"
@@ -1391,7 +1391,7 @@
         "Male/ Female": "F",
         "Display": "neutral",
         "Agreement (%)": 65,
-        "Putity (0-1)": "x",
+        "Putity   (0-1)": "x",
         "Intensity (0-1)": "x",
         "N": 23,
         "FACS ": "14A+25A"
@@ -1402,7 +1402,7 @@
         "Male/ Female": "F",
         "Display": "joy",
         "Agreement (%)": 97,
-        "Putity (0-1)": 0.9,
+        "Putity   (0-1)": 0.9,
         "Intensity (0-1)": 0.76,
         "N": 33,
         "FACS ": "6C+12E+25E"
@@ -1413,7 +1413,7 @@
         "Male/ Female": "F",
         "Display": "sadness",
         "Agreement (%)": 78,
-        "Putity (0-1)": 0.67,
+        "Putity   (0-1)": 0.67,
         "Intensity (0-1)": 0.65,
         "N": 23,
         "FACS ": "7B+15C+17C"
@@ -1424,7 +1424,7 @@
         "Male/ Female": "F",
         "Display": "disgust",
         "Agreement (%)": 92,
-        "Putity (0-1)": 0.77,
+        "Putity   (0-1)": 0.77,
         "Intensity (0-1)": 0.74,
         "N": 26,
         "FACS ": "4C+7D+9E+25E"
@@ -1435,7 +1435,7 @@
         "Male/ Female": "F",
         "Display": "surprise",
         "Agreement (%)": 95,
-        "Putity (0-1)": 0.75,
+        "Putity   (0-1)": 0.75,
         "Intensity (0-1)": 0.73,
         "N": 20,
         "FACS ": "1D+2E+5C+25B+26B"
@@ -1446,7 +1446,7 @@
         "Male/ Female": "F",
         "Display": "fear",
         "Agreement (%)": 67,
-        "Putity (0-1)": 0.55,
+        "Putity   (0-1)": 0.55,
         "Intensity (0-1)": 0.65,
         "N": 33,
         "FACS ": "1D+2D+5C+20B+25C"
@@ -1457,7 +1457,7 @@
         "Male/ Female": "F",
         "Display": "anger",
         "Agreement (%)": 100,
-        "Putity (0-1)": 0.8,
+        "Putity   (0-1)": 0.8,
         "Intensity (0-1)": 0.65,
         "N": 28,
         "FACS ": "4D+17D+24E+34"
@@ -1468,7 +1468,7 @@
         "Male/ Female": "M",
         "Display": "neutral",
         "Agreement (%)": 71,
-        "Putity (0-1)": "x",
+        "Putity   (0-1)": "x",
         "Intensity (0-1)": "x",
         "N": 14,
         "FACS ": "B24B"
@@ -1479,7 +1479,7 @@
         "Male/ Female": "M",
         "Display": "joy",
         "Agreement (%)": 79,
-        "Putity (0-1)": 0.64,
+        "Putity   (0-1)": 0.64,
         "Intensity (0-1)": 0.52,
         "N": 34,
         "FACS ": "6D+7D+13D+25C"
@@ -1490,7 +1490,7 @@
         "Male/ Female": "M",
         "Display": "surprise",
         "Agreement (%)": 93,
-        "Putity (0-1)": 0.76,
+        "Putity   (0-1)": 0.76,
         "Intensity (0-1)": 0.73,
         "N": 28,
         "FACS ": "1E+2E+5D+25B+26B"
@@ -1501,7 +1501,7 @@
         "Male/ Female": "M",
         "Display": "anger",
         "Agreement (%)": 76,
-        "Putity (0-1)": 0.55,
+        "Putity   (0-1)": 0.55,
         "Intensity (0-1)": 0.52,
         "N": 21,
         "FACS ": "4D+23D"
@@ -1512,7 +1512,7 @@
         "Male/ Female": "M",
         "Display": "disgust",
         "Agreement (%)": 85,
-        "Putity (0-1)": 0.75,
+        "Putity   (0-1)": 0.75,
         "Intensity (0-1)": 0.63,
         "N": 27,
         "FACS ": "6D+L7E+9E+17D"
@@ -1523,7 +1523,7 @@
         "Male/ Female": "M",
         "Display": "fear",
         "Agreement (%)": 90,
-        "Putity (0-1)": 0.74,
+        "Putity   (0-1)": 0.74,
         "Intensity (0-1)": 0.78,
         "N": 29,
         "FACS ": "1E+2D+4D+5D+20C+25C"
@@ -1534,7 +1534,7 @@
         "Male/ Female": "M",
         "Display": "sadness",
         "Agreement (%)": 95,
-        "Putity (0-1)": 0.85,
+        "Putity   (0-1)": 0.85,
         "Intensity (0-1)": 0.72,
         "N": 21,
         "FACS ": "1E+4C+15C+17C"
@@ -1545,7 +1545,7 @@
         "Male/ Female": "F",
         "Display": "neutral",
         "Agreement (%)": 65,
-        "Putity (0-1)": "x",
+        "Putity   (0-1)": "x",
         "Intensity (0-1)": "x",
         "N": 31,
         "FACS ": "14A"
@@ -1556,7 +1556,7 @@
         "Male/ Female": "F",
         "Display": "sadness",
         "Agreement (%)": 95,
-        "Putity (0-1)": 0.87,
+        "Putity   (0-1)": 0.87,
         "Intensity (0-1)": 0.71,
         "N": 20,
         "FACS ": "1C+4C+L11B+15B+17A"
@@ -1567,7 +1567,7 @@
         "Male/ Female": "F",
         "Display": "fear",
         "Agreement (%)": 35,
-        "Putity (0-1)": 0.24,
+        "Putity   (0-1)": 0.24,
         "Intensity (0-1)": 0.66,
         "N": 26,
         "FACS ": "1D+4C+5C+20D+21+25C"
@@ -1578,7 +1578,7 @@
         "Male/ Female": "F",
         "Display": "joy",
         "Agreement (%)": 79,
-        "Putity (0-1)": 0.65,
+        "Putity   (0-1)": 0.65,
         "Intensity (0-1)": 0.67,
         "N": 42,
         "FACS ": "6D+7B+12D+25D"
@@ -1589,7 +1589,7 @@
         "Male/ Female": "F",
         "Display": "surprise",
         "Agreement (%)": 100,
-        "Putity (0-1)": 0.88,
+        "Putity   (0-1)": 0.88,
         "Intensity (0-1)": 0.7,
         "N": 34,
         "FACS ": "1B+2B+5D+25C+26C"
@@ -1600,7 +1600,7 @@
         "Male/ Female": "F",
         "Display": "disgust",
         "Agreement (%)": 80,
-        "Putity (0-1)": 0.67,
+        "Putity   (0-1)": 0.67,
         "Intensity (0-1)": 0.61,
         "N": 30,
         "FACS ": "7C+10D+17C+21+25A"
@@ -1611,7 +1611,7 @@
         "Male/ Female": "F",
         "Display": "anger",
         "Agreement (%)": 67,
-        "Putity (0-1)": 0.53,
+        "Putity   (0-1)": 0.53,
         "Intensity (0-1)": 0.63,
         "N": 39,
         "FACS ": "7C+10C+17B+23C"
@@ -1622,7 +1622,7 @@
         "Male/ Female": "F",
         "Display": "neutral",
         "Agreement (%)": 85,
-        "Putity (0-1)": "x",
+        "Putity   (0-1)": "x",
         "Intensity (0-1)": "x",
         "N": 20,
         "FACS ": 0
@@ -1633,7 +1633,7 @@
         "Male/ Female": "F",
         "Display": "joy",
         "Agreement (%)": 96,
-        "Putity (0-1)": 0.85,
+        "Putity   (0-1)": 0.85,
         "Intensity (0-1)": 0.64,
         "N": 28,
         "FACS ": "6D+12D+25E"
@@ -1644,7 +1644,7 @@
         "Male/ Female": "F",
         "Display": "disgust",
         "Agreement (%)": 97,
-        "Putity (0-1)": 0.83,
+        "Putity   (0-1)": 0.83,
         "Intensity (0-1)": 0.55,
         "N": 34,
         "FACS ": "4C+7C+9D+25C"
@@ -1655,7 +1655,7 @@
         "Male/ Female": "F",
         "Display": "anger",
         "Agreement (%)": 90,
-        "Putity (0-1)": 0.75,
+        "Putity   (0-1)": 0.75,
         "Intensity (0-1)": 0.67,
         "N": 41,
         "FACS ": "4E+5C+7C+23D+24D+34"
@@ -1666,7 +1666,7 @@
         "Male/ Female": "F",
         "Display": "sadness",
         "Agreement (%)": 69,
-        "Putity (0-1)": 0.61,
+        "Putity   (0-1)": 0.61,
         "Intensity (0-1)": 0.63,
         "N": 16,
         "FACS ": "1D+4D+7C+11B+17C"
@@ -1677,7 +1677,7 @@
         "Male/ Female": "F",
         "Display": "fear",
         "Agreement (%)": 53,
-        "Putity (0-1)": 0.49,
+        "Putity   (0-1)": 0.49,
         "Intensity (0-1)": 0.64,
         "N": 30,
         "FACS ": "1E+2E+5E+11B+20D+21+25C"
@@ -1688,7 +1688,7 @@
         "Male/ Female": "F",
         "Display": "surprise",
         "Agreement (%)": 89,
-        "Putity (0-1)": 0.78,
+        "Putity   (0-1)": 0.78,
         "Intensity (0-1)": 0.64,
         "N": 19,
         "FACS ": "1D+2D+5C+25C+26C"
@@ -1699,7 +1699,7 @@
         "Male/ Female": "M",
         "Display": "neutral",
         "Agreement (%)": 80,
-        "Putity (0-1)": "x",
+        "Putity   (0-1)": "x",
         "Intensity (0-1)": "x",
         "N": 25,
         "FACS ": "5A"
@@ -1710,7 +1710,7 @@
         "Male/ Female": "M",
         "Display": "joy",
         "Agreement (%)": 90,
-        "Putity (0-1)": 0.76,
+        "Putity   (0-1)": 0.76,
         "Intensity (0-1)": 0.77,
         "N": 31,
         "FACS ": "6E+12D+25D"
@@ -1721,7 +1721,7 @@
         "Male/ Female": "M",
         "Display": "fear",
         "Agreement (%)": 76,
-        "Putity (0-1)": 0.61,
+        "Putity   (0-1)": 0.61,
         "Intensity (0-1)": 0.77,
         "N": 17,
         "FACS ": "1E+2E+5E+20E+21+25D+26C"
@@ -1732,7 +1732,7 @@
         "Male/ Female": "M",
         "Display": "surprise",
         "Agreement (%)": 81,
-        "Putity (0-1)": 0.66,
+        "Putity   (0-1)": 0.66,
         "Intensity (0-1)": 0.75,
         "N": 26,
         "FACS ": "1E+2E+5D+25C+26B"
@@ -1743,7 +1743,7 @@
         "Male/ Female": "M",
         "Display": "anger",
         "Agreement (%)": 83,
-        "Putity (0-1)": 0.66,
+        "Putity   (0-1)": 0.66,
         "Intensity (0-1)": 0.64,
         "N": 40,
         "FACS ": "4E+7C+11D+17C+24E"
@@ -1754,7 +1754,7 @@
         "Male/ Female": "M",
         "Display": "sadness",
         "Agreement (%)": 87,
-        "Putity (0-1)": 0.74,
+        "Putity   (0-1)": 0.74,
         "Intensity (0-1)": 0.67,
         "N": 23,
         "FACS ": "1D+4B+11C+15C+17C"
@@ -1765,7 +1765,7 @@
         "Male/ Female": "M",
         "Display": "disgust",
         "Agreement (%)": 90,
-        "Putity (0-1)": 0.83,
+        "Putity   (0-1)": 0.83,
         "Intensity (0-1)": 0.78,
         "N": 31,
         "FACS ": "6C+7D+9E+25C"
@@ -1776,7 +1776,7 @@
         "Male/ Female": "M",
         "Display": "neutral",
         "Agreement (%)": 50,
-        "Putity (0-1)": "x",
+        "Putity   (0-1)": "x",
         "Intensity (0-1)": "x",
         "N": 26,
         "FACS ": 0
@@ -1787,7 +1787,7 @@
         "Male/ Female": "M",
         "Display": "sadness",
         "Agreement (%)": 77,
-        "Putity (0-1)": 0.72,
+        "Putity   (0-1)": 0.72,
         "Intensity (0-1)": 0.71,
         "N": 26,
         "FACS ": "1C+7A+11C+15A"
@@ -1798,7 +1798,7 @@
         "Male/ Female": "M",
         "Display": "fear",
         "Agreement (%)": 57,
-        "Putity (0-1)": 0.53,
+        "Putity   (0-1)": 0.53,
         "Intensity (0-1)": 0.81,
         "N": 21,
         "FACS ": "1E+2E+5E+20D+21+25C"
@@ -1809,7 +1809,7 @@
         "Male/ Female": "M",
         "Display": "anger",
         "Agreement (%)": 86,
-        "Putity (0-1)": 0.71,
+        "Putity   (0-1)": 0.71,
         "Intensity (0-1)": 0.78,
         "N": 29,
         "FACS ": "7B+9D+17D+24D"
@@ -1820,7 +1820,7 @@
         "Male/ Female": "M",
         "Display": "disgust",
         "Agreement (%)": 94,
-        "Putity (0-1)": 0.75,
+        "Putity   (0-1)": 0.75,
         "Intensity (0-1)": 0.76,
         "N": 33,
         "FACS ": "7B+9D+17B+21+25A"
@@ -1831,7 +1831,7 @@
         "Male/ Female": "M",
         "Display": "joy",
         "Agreement (%)": 90,
-        "Putity (0-1)": 0.76,
+        "Putity   (0-1)": 0.76,
         "Intensity (0-1)": 0.63,
         "N": 31,
         "FACS ": "6D+12E+25D"
@@ -1842,7 +1842,7 @@
         "Male/ Female": "M",
         "Display": "surprise",
         "Agreement (%)": 83,
-        "Putity (0-1)": 0.69,
+        "Putity   (0-1)": 0.69,
         "Intensity (0-1)": 0.71,
         "N": 23,
         "FACS ": "1D+2D+5D+25C+26C"
@@ -1853,7 +1853,7 @@
         "Male/ Female": "M",
         "Display": "neutral",
         "Agreement (%)": 59,
-        "Putity (0-1)": "x",
+        "Putity   (0-1)": "x",
         "Intensity (0-1)": "x",
         "N": 17,
         "FACS ": 0
@@ -1864,7 +1864,7 @@
         "Male/ Female": "M",
         "Display": "joy",
         "Agreement (%)": 95,
-        "Putity (0-1)": 0.77,
+        "Putity   (0-1)": 0.77,
         "Intensity (0-1)": 0.68,
         "N": 37,
         "FACS ": "6E+12D+25C"
@@ -1875,7 +1875,7 @@
         "Male/ Female": "M",
         "Display": "surprise",
         "Agreement (%)": 86,
-        "Putity (0-1)": 0.76,
+        "Putity   (0-1)": 0.76,
         "Intensity (0-1)": 0.76,
         "N": 29,
         "FACS ": "1E+2E+5E+25D+26C"
@@ -1886,7 +1886,7 @@
         "Male/ Female": "M",
         "Display": "disgust",
         "Agreement (%)": 81,
-        "Putity (0-1)": 0.7,
+        "Putity   (0-1)": 0.7,
         "Intensity (0-1)": 0.66,
         "N": 42,
         "FACS ": "6C+7D+9E+17C"
@@ -1897,7 +1897,7 @@
         "Male/ Female": "M",
         "Display": "sadness",
         "Agreement (%)": 97,
-        "Putity (0-1)": 0.86,
+        "Putity   (0-1)": 0.86,
         "Intensity (0-1)": 0.68,
         "N": 31,
         "FACS ": "1C+4C+15+17C"
@@ -1908,7 +1908,7 @@
         "Male/ Female": "M",
         "Display": "anger",
         "Agreement (%)": 76,
-        "Putity (0-1)": 0.64,
+        "Putity   (0-1)": 0.64,
         "Intensity (0-1)": 0.8,
         "N": 33,
         "FACS ": "4D+7C+10C+15C+17D+24C"
@@ -1919,7 +1919,7 @@
         "Male/ Female": "M",
         "Display": "fear",
         "Agreement (%)": 52,
-        "Putity (0-1)": 0.41,
+        "Putity   (0-1)": 0.41,
         "Intensity (0-1)": 0.69,
         "N": 25,
         "FACS ": "1D+2B+5E+20B+25C"
@@ -1930,7 +1930,7 @@
         "Male/ Female": "F",
         "Display": "anger",
         "Agreement (%)": 93,
-        "Putity (0-1)": 0.77,
+        "Putity   (0-1)": 0.77,
         "Intensity (0-1)": 0.6,
         "N": 40,
         "FACS ": "4C+5D+17B+23D+38B"
@@ -1941,7 +1941,7 @@
         "Male/ Female": "F",
         "Display": "fear",
         "Agreement (%)": 78,
-        "Putity (0-1)": 0.65,
+        "Putity   (0-1)": 0.65,
         "Intensity (0-1)": 0.81,
         "N": 23,
         "FACS ": "1E+5D+21+25D+26D"
@@ -1952,7 +1952,7 @@
         "Male/ Female": "F",
         "Display": "neutral",
         "Agreement (%)": 52,
-        "Putity (0-1)": "x",
+        "Putity   (0-1)": "x",
         "Intensity (0-1)": "x",
         "N": 21,
         "FACS ": 0
@@ -1963,7 +1963,7 @@
         "Male/ Female": "F",
         "Display": "joy",
         "Agreement (%)": 88,
-        "Putity (0-1)": 0.71,
+        "Putity   (0-1)": 0.71,
         "Intensity (0-1)": 0.72,
         "N": 41,
         "FACS ": "6D+12D+25D"
@@ -1974,7 +1974,7 @@
         "Male/ Female": "F",
         "Display": "surprise",
         "Agreement (%)": 93,
-        "Putity (0-1)": 0.82,
+        "Putity   (0-1)": 0.82,
         "Intensity (0-1)": 0.58,
         "N": 28,
         "FACS ": "1C+5D+25C"
@@ -1985,7 +1985,7 @@
         "Male/ Female": "F",
         "Display": "disgust",
         "Agreement (%)": 91,
-        "Putity (0-1)": 0.8,
+        "Putity   (0-1)": 0.8,
         "Intensity (0-1)": 0.72,
         "N": 34,
         "FACS ": "L2C+7D+10D+17C"
@@ -1996,7 +1996,7 @@
         "Male/ Female": "F",
         "Display": "sadness",
         "Agreement (%)": 94,
-        "Putity (0-1)": 0.84,
+        "Putity   (0-1)": 0.84,
         "Intensity (0-1)": 0.71,
         "N": 34,
         "FACS ": "1C+4B+11B+15C+17B"
@@ -2007,7 +2007,7 @@
         "Male/ Female": "M",
         "Display": "neutral",
         "Agreement (%)": 72,
-        "Putity (0-1)": "x",
+        "Putity   (0-1)": "x",
         "Intensity (0-1)": "x",
         "N": 23,
         "FACS ": 0
@@ -2018,7 +2018,7 @@
         "Male/ Female": "M",
         "Display": "joy",
         "Agreement (%)": 91,
-        "Putity (0-1)": 0.88,
+        "Putity   (0-1)": 0.88,
         "Intensity (0-1)": 0.7,
         "N": 26,
         "FACS ": "6E+12D+25D"
@@ -2029,7 +2029,7 @@
         "Male/ Female": "M",
         "Display": "sadness",
         "Agreement (%)": 67,
-        "Putity (0-1)": 0.69,
+        "Putity   (0-1)": 0.69,
         "Intensity (0-1)": 0.53,
         "N": 21,
         "FACS ": "15C"
@@ -2040,7 +2040,7 @@
         "Male/ Female": "M",
         "Display": "anger",
         "Agreement (%)": 83,
-        "Putity (0-1)": 0.63,
+        "Putity   (0-1)": 0.63,
         "Intensity (0-1)": 0.67,
         "N": 21,
         "FACS ": "4D+7B+17E+24E+38"
@@ -2051,7 +2051,7 @@
         "Male/ Female": "M",
         "Display": "disgust",
         "Agreement (%)": 89,
-        "Putity (0-1)": 0.73,
+        "Putity   (0-1)": 0.73,
         "Intensity (0-1)": 0.74,
         "N": 26,
         "FACS ": "7D+9E+17D"
@@ -2062,7 +2062,7 @@
         "Male/ Female": "M",
         "Display": "surprise",
         "Agreement (%)": 83,
-        "Putity (0-1)": 0.77,
+        "Putity   (0-1)": 0.77,
         "Intensity (0-1)": 0.78,
         "N": 27,
         "FACS ": "1E+2E+5E+25C"
@@ -2073,7 +2073,7 @@
         "Male/ Female": "M",
         "Display": "fear",
         "Agreement (%)": 76,
-        "Putity (0-1)": 0.81,
+        "Putity   (0-1)": 0.81,
         "Intensity (0-1)": 0.64,
         "N": 18,
         "FACS ": "1D+2E+5E+16D+25D"
@@ -2084,7 +2084,7 @@
         "Male/ Female": "M",
         "Display": "neutral",
         "Agreement (%)": 50,
-        "Putity (0-1)": "x",
+        "Putity   (0-1)": "x",
         "Intensity (0-1)": "x",
         "N": 20,
         "FACS ": "7B"
@@ -2095,7 +2095,7 @@
         "Male/ Female": "M",
         "Display": "disgust",
         "Agreement (%)": 100,
-        "Putity (0-1)": 0.92,
+        "Putity   (0-1)": 0.92,
         "Intensity (0-1)": 0.75,
         "N": 37,
         "FACS ": "9D+17D+21+25B"
@@ -2106,7 +2106,7 @@
         "Male/ Female": "M",
         "Display": "surprise",
         "Agreement (%)": 85,
-        "Putity (0-1)": 0.7,
+        "Putity   (0-1)": 0.7,
         "Intensity (0-1)": 0.74,
         "N": 27,
         "FACS ": "1E+2E+5D+25D+26C"
@@ -2117,7 +2117,7 @@
         "Male/ Female": "M",
         "Display": "joy",
         "Agreement (%)": 88,
-        "Putity (0-1)": 0.78,
+        "Putity   (0-1)": 0.78,
         "Intensity (0-1)": 0.72,
         "N": 33,
         "FACS ": "6D+12D+25D"
@@ -2128,7 +2128,7 @@
         "Male/ Female": "M",
         "Display": "fear",
         "Agreement (%)": 70,
-        "Putity (0-1)": 0.57,
+        "Putity   (0-1)": 0.57,
         "Intensity (0-1)": 0.77,
         "N": 23,
         "FACS ": "5E+20E+25C"
@@ -2139,7 +2139,7 @@
         "Male/ Female": "M",
         "Display": "sadness",
         "Agreement (%)": 86,
-        "Putity (0-1)": 0.75,
+        "Putity   (0-1)": 0.75,
         "Intensity (0-1)": 0.55,
         "N": 28,
         "FACS ": "11B+15C"
@@ -2150,7 +2150,7 @@
         "Male/ Female": "M",
         "Display": "anger",
         "Agreement (%)": 68,
-        "Putity (0-1)": 0.61,
+        "Putity   (0-1)": 0.61,
         "Intensity (0-1)": 0.75,
         "N": 19,
         "FACS ": "4C+5B+10C+17C+23D+24C"
@@ -2161,7 +2161,7 @@
         "Male/ Female": "F",
         "Display": "joy",
         "Agreement (%)": 97,
-        "Putity (0-1)": 0.85,
+        "Putity   (0-1)": 0.85,
         "Intensity (0-1)": 0.8,
         "N": 34,
         "FACS ": "6D+12E+25E+26C"
@@ -2172,7 +2172,7 @@
         "Male/ Female": "F",
         "Display": "disgust",
         "Agreement (%)": 89,
-        "Putity (0-1)": 0.71,
+        "Putity   (0-1)": 0.71,
         "Intensity (0-1)": 0.62,
         "N": 27,
         "FACS ": "9+25B"
@@ -2183,7 +2183,7 @@
         "Male/ Female": "F",
         "Display": "anger",
         "Agreement (%)": 95,
-        "Putity (0-1)": 0.84,
+        "Putity   (0-1)": 0.84,
         "Intensity (0-1)": 0.72,
         "N": 20,
         "FACS ": "4E+17C+23C+24C"
@@ -2194,7 +2194,7 @@
         "Male/ Female": "F",
         "Display": "surprise",
         "Agreement (%)": 100,
-        "Putity (0-1)": 0.94,
+        "Putity   (0-1)": 0.94,
         "Intensity (0-1)": 0.72,
         "N": 27,
         "FACS ": "5D+25C"
@@ -2205,7 +2205,7 @@
         "Male/ Female": "F",
         "Display": "sadness",
         "Agreement (%)": 84,
-        "Putity (0-1)": 0.7,
+        "Putity   (0-1)": 0.7,
         "Intensity (0-1)": 0.66,
         "N": 19,
         "FACS ": "1C+4C+15C+17C"
@@ -2216,7 +2216,7 @@
         "Male/ Female": "F",
         "Display": "fear",
         "Agreement (%)": 75,
-        "Putity (0-1)": 0.62,
+        "Putity   (0-1)": 0.62,
         "Intensity (0-1)": 0.76,
         "N": 28,
         "FACS ": "1D+4C+5C+21+25D+26D"
@@ -2227,7 +2227,7 @@
         "Male/ Female": "F",
         "Display": "neutral",
         "Agreement (%)": 91,
-        "Putity (0-1)": "x",
+        "Putity   (0-1)": "x",
         "Intensity (0-1)": "x",
         "N": 33,
         "FACS ": 0
@@ -2238,7 +2238,7 @@
         "Male/ Female": "F",
         "Display": "joy",
         "Agreement (%)": 77,
-        "Putity (0-1)": 0.58,
+        "Putity   (0-1)": 0.58,
         "Intensity (0-1)": 0.64,
         "N": 22,
         "FACS ": "6B+12E+25D"
@@ -2249,7 +2249,7 @@
         "Male/ Female": "F",
         "Display": "surprise",
         "Agreement (%)": 88,
-        "Putity (0-1)": 0.83,
+        "Putity   (0-1)": 0.83,
         "Intensity (0-1)": 0.86,
         "N": 24,
         "FACS ": "1C+2C+5D+22D+25C"
@@ -2260,7 +2260,7 @@
         "Male/ Female": "F",
         "Display": "disgust",
         "Agreement (%)": 93,
-        "Putity (0-1)": 0.85,
+        "Putity   (0-1)": 0.85,
         "Intensity (0-1)": 0.78,
         "N": 30,
         "FACS ": "9D+17D"
@@ -2271,7 +2271,7 @@
         "Male/ Female": "F",
         "Display": "neutral",
         "Agreement (%)": 81,
-        "Putity (0-1)": "x",
+        "Putity   (0-1)": "x",
         "Intensity (0-1)": "x",
         "N": 21,
         "FACS ": "17A"
@@ -2282,7 +2282,7 @@
         "Male/ Female": "F",
         "Display": "anger",
         "Agreement (%)": 92,
-        "Putity (0-1)": 0.71,
+        "Putity   (0-1)": 0.71,
         "Intensity (0-1)": 0.61,
         "N": 24,
         "FACS ": "4D+7B+17D+23C+24C"
@@ -2293,20 +2293,9 @@
         "Male/ Female": "F",
         "Display": "sadness",
         "Agreement (%)": 79,
-        "Putity (0-1)": 0.63,
+        "Putity   (0-1)": 0.63,
         "Intensity (0-1)": 0.65,
         "N": 24,
         "FACS ": "1B+15C"
-    },
-    {
-        "Displayer ID":"SS",
-        "Picture ID":"SS_1188.jpg",
-        "Male/ Female":"F",
-        "Display":"fear",
-        "Agreement (%)":84,
-        "Putity (0-1)":0.69,
-        "Intensity (0-1)":0.78,
-        "N":31,
-        "FACS ":"1D+4A+5D+11B+25D"
     }
 ]
