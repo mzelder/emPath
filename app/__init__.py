@@ -181,8 +181,10 @@ def quiz2():
 
     for i in range(0, len(random_tuple[1])):
         point_dict[str(random_tuple[1][i])] = 0
-      
-    return str(random_tuple[0] + "   " + random_tuple[2])
+    
+    for k, v in point_dict.items():  #debug
+        print(k, v)         
+    return render_template("quiz1.html")
 
 @app.route("/results")
 @login_required
