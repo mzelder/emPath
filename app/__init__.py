@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, abort, session, redirect, url_for, flash
 from werkzeug.security import generate_password_hash, check_password_hash
 from models import db, User, UserServer
-import excel_fetch
+# import excel_fetch
 import re
 
 # inicjalizacja aplikacji
@@ -49,7 +49,6 @@ def who_are_you():
     if request.method == 'POST':
         val = str(request.form.get('role'))
         if val == 'user' or val == 'scientist':
-            print("siema")
             session['user_type'] = val
             return redirect(url_for('register'))
     return render_template('choose.html')
