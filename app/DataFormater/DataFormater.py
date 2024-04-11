@@ -25,7 +25,7 @@ def process_records(records):
     return processed_records
 
 # Wczytanie danych z pliku
-with open('textformat.txt', 'r') as file:
+with open('\\textformat.txt', 'r') as file:
     data = json.load(file)
 
 # Przetwarzanie rekordów

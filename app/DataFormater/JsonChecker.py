@@ -17,7 +17,7 @@ def find_missing_values(json_data):
 
     return missing_values
 
-json_file_path = 'C:\\Users\\mokra\\OneDrive\\Dokumenty\\GitHub\\emPath\\app\\DataFormater\\textformated.json'  # Ścieżka do pliku .json
+json_file_path = '\app\\DataFormater\\textformated.json'  # Ścieżka do pliku .json
 
 # Sprawdź, czy plik .json istnieje
 if not os.path.exists(json_file_path):
@@ -54,7 +54,7 @@ print("Nazwy zdjęć, dla których wszystkie dane są poprawne:")
 for picture_id in valid_records:
     print(picture_id)
 
-valid_records_file_path = 'C:\\Users\\mokra\\OneDrive\\Dokumenty\\GitHub\\emPath\\app\\DataFormater\\valid_records.txt'
+valid_records_file_path = '\app\\DataFormater\\valid_records.txt'
 
 with open(valid_records_file_path, 'w') as file:
     for picture_id in valid_records:
