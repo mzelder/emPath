@@ -32,13 +32,6 @@ with open(json_file_path, 'r') as file:
 # Znajdź brakujące wartości w pliku .json
 missing_values = find_missing_values(json_data)
 
-# Wyświetl rekordy, w których występują brakujące wartości
-if missing_values:
-    print("Rekordy, w których występują brakujące wartości:")
-    for missing_info in missing_values:
-        print(f"Picture ID: {missing_info['Picture ID']}, Błąd: {', '.join(missing_info['Missing Values'])}")
-else:
-    print("Nie znaleziono brakujących wartości w pliku .json.")
 
 # Wyświetl nazwy zdjęć, dla których wszystkie dane są poprawne
 valid_records = []
@@ -50,10 +43,6 @@ for record in json_data:
             break
     if is_valid:
         valid_records.append(record['Picture ID'])
-
-print("Nazwy zdjęć, dla których wszystkie dane są poprawne:")
-for picture_id in valid_records:
-    print(picture_id)
 
 # Ścieżka do pliku valid_records.txt
 valid_records_file_path = 'valid_records.txt'
