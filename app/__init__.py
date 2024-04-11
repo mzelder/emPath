@@ -4,12 +4,21 @@ from models import db, User, UserServer
 import re
 from sqlalchemy import func
 import DataFormater.RandomPhotoPickerOneToFour as rpp
+from functools import wraps
 
 # inicjalizacja aplikacji
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "secret_key"
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db.sqlite3"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+
+def login_required(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if "current_user" not in session:
+            return redirect(url_for("index"))
+        return f(*args, **kwargs)
+    return decorated_function
 
 def create_account(uname, pwd, birth_year=None, residency=None, sex=None, account_type=None):
     pwd_hash = generate_password_hash(pwd)
@@ -110,28 +119,34 @@ def register():
             return redirect(url_for('home'))                           
     return render_template("register.html")                                                        # unknown error
 
-
-@app.route("/home")
+@login_required
+@app.route("/home", methods=['GET', 'POST'])
 def home():
+    if request.method == 'POST':
+        next_form = str(request.form.get('form_value'))
+        redirect(url_for('test_' + next_form))
     return render_template('home.html')
 
+@login_required
 @app.route("/test_form1", methods=['GET', 'POST'])
 def test_form1():
     random_tuple = rpp.choose_correct_emotion()
     point_dict = {}
     point_dict[str(random_tuple[0])] = 1
+
     for i in range(0, len(random_tuple[1])):
         point_dict[str(random_tuple[1][i])] = 0
     
-    for k, v in point_dict.items():
-        print(k, v)
+    for k, v in point_dict.items():  #debug
+        print(k, v)         
     return str(random_tuple[0] + "   " + random_tuple[2])
 
-
+@login_required
 @app.route("/results")
 def results():
     pass
 
+@login_required
 @app.route("/account")
 def account():
     pass
