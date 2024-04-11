@@ -11,7 +11,6 @@ class User(db.Model):
     birthYear = db.Column(db.Integer, nullable=False)
     sex = db.Column(db.String(1), nullable=False)
     placeOfResidence = db.Column(db.String(50), nullable=False) # village < 20 tys, town - 20-100 tys, city > 100 tys
-    additionalInformation = db.Column(db.String(100), nullable=False) # student, employed, unemployed, retired
     training_sessions = db.relationship("Training_Session", backref="user", lazy=True)
 
 class Training_Session(db.Model):
@@ -40,4 +39,4 @@ class UserServer(db.Model):
     id = db.Column(db.Integer, primary_key = True)
     username = db.Column(db.String(50), nullable=False)
     password = db.Column(db.String(20), nullable=False)
-    type = db.Column(db.Enum('regular_user', 'scientist'))
+    type = db.Column(db.Enum('user', 'scientist'))
