@@ -139,7 +139,7 @@ def quiz1():
     
     for k, v in point_dict.items():  #debug
         print(k, v)         
-    return str(random_tuple[0] + "   " + random_tuple[2])
+    return render_template("quiz1.html")
 
 @login_required
 @app.route("/results")
