@@ -17,11 +17,11 @@ with app.app_context():
 
 @app.route("/")
 def index():
-    return 
+    return "Hi"
 
 @app.route("/register", methods=['GET', 'POST'])
 def register():
-    if request.method == 'POST':
+    if request.method == 'GET':
         if request.form.get('username') in UserServer.query.all(): #is there an account with this username?
             return 'registration failed - account already exists'
         if re.match("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$", request.form.get('password')):
@@ -31,7 +31,7 @@ def register():
             # CODE HERE TO INPUT DATA INTO DATABASE
         else:
             return 'registration failed - Password must match regex'
-    return render_template('register.html')
+    return "?"
 
 @app.route("/results")
 def results():
