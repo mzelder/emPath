@@ -1,6 +1,6 @@
 import pandas as pd
 import os
-
+ #dfsdfsd
 def save_data_to_txt():
     # Pobierz ścieżkę do bieżącego katalogu roboczego
     current_dir = os.path.dirname(__file__)
