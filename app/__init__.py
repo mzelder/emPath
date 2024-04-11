@@ -3,14 +3,21 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from models import db, User, UserServer
 import re
 from sqlalchemy import func
-import DataFormater.RandomPhotoPickerOneToFour as rpp
+import DataFormater.RandomPhotoPickerOneToFour as q1handle
+import DataFormater.Random4Photos1Emotion as q2handle
 from functools import wraps
+import random as r
 
 # inicjalizacja aplikacji
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "secret_key"
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db.sqlite3"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+
+@app.route("/signout")
+def signout():
+    session.clear()
+    return redirect(url_for("index"))
 
 def login_required(f):
     @wraps(f)
@@ -119,35 +126,72 @@ def register():
             return redirect(url_for('home'))                           
     return render_template("register.html")                                                        # unknown error
 
-@login_required
+
 @app.route("/home", methods=['GET', 'POST'])
+@login_required
 def home():
     if request.method == 'POST':
         next_form = str(request.form.get('form_value'))
         return redirect(url_for(next_form))
     return render_template('home.html')
 
-@login_required
+
 @app.route("/quiz1", methods=['GET', 'POST'])
+@login_required
 def quiz1():
-    random_tuple = rpp.choose_correct_emotion()
+    if 'q1_question_sequence' not in session:
+        session['q1_question_sequence'] = []
+
+    if 'q1_question_count' not in session:
+        session['q1_question_count'] = 0
+
+    if request.method == 'POST':
+        ans = int(request.form.get('answer'))  # Convert answer to integer directly
+        session['q1_question_sequence'].append((session['q1_question_count'], ans))
+        session['q1_question_count'] += 1
+        return redirect(url_for('quiz1'))
+    
+    if session['q1_question_count'] < 20:
+        random_tuple = q1handle.choose_correct_emotion()
+        point_dict = {str(random_tuple[0]): 1}
+
+        for item in random_tuple[1]:
+            point_dict[str(item)] = 0
+
+        emotions = list(point_dict.keys())
+        r.shuffle(emotions)
+
+        print(emotions, random_tuple[2], random_tuple[0])
+
+        return render_template('quiz1.html', i=session['q1_question_count'], emotions=emotions, img_src=random_tuple[2])
+    else:
+        return redirect(url_for('results'))
+    
+    
+        
+    
+
+
+@app.route("/quiz2", methods=['GET', 'POST'])
+@login_required
+def quiz2():
+    random_tuple = q2handle.generate_output()
     point_dict = {}
     point_dict[str(random_tuple[0])] = 1
 
     for i in range(0, len(random_tuple[1])):
         point_dict[str(random_tuple[1][i])] = 0
-    
-    for k, v in point_dict.items():  #debug
-        print(k, v)         
+      
     return str(random_tuple[0] + "   " + random_tuple[2])
 
-@login_required
 @app.route("/results")
-def results():
-    pass
-
 @login_required
+def results():
+    return "results xd"
+
+
 @app.route("/account")
+@login_required
 def account():
     pass
 
