@@ -48,7 +48,6 @@ def who_are_you():
     if request.method == 'POST':
         val = str(request.form.get('role'))
         if val == 'user' or val == 'scientist':
-            print("siema")
             session['user_type'] = val
             return redirect(url_for('register'))
     return render_template('choose.html')
