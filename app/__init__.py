@@ -124,12 +124,12 @@ def register():
 def home():
     if request.method == 'POST':
         next_form = str(request.form.get('form_value'))
-        redirect(url_for('test_' + next_form))
+        redirect(url_for(next_form))
     return render_template('home.html')
 
 @login_required
-@app.route("/test_form1", methods=['GET', 'POST'])
-def test_form1():
+@app.route("/quiz1", methods=['GET', 'POST'])
+def quiz1():
     random_tuple = rpp.choose_correct_emotion()
     point_dict = {}
     point_dict[str(random_tuple[0])] = 1
