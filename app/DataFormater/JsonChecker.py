@@ -53,3 +53,9 @@ for record in json_data:
 print("Nazwy zdjęć, dla których wszystkie dane są poprawne:")
 for picture_id in valid_records:
     print(picture_id)
+
+valid_records_file_path = 'C:\\Users\\mokra\\OneDrive\\Dokumenty\\GitHub\\emPath\\app\\DataFormater\\valid_records.txt'
+
+with open(valid_records_file_path, 'w') as file:
+    for picture_id in valid_records:
+        file.write(picture_id + '\n')
