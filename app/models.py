@@ -40,4 +40,4 @@ class UserServer(db.Model):
     id = db.Column(db.Integer, primary_key = True)
     username = db.Column(db.String(50), nullable=False)
     password = db.Column(db.String(20), nullable=False)
-    type = db.Column(db.Enum('regular user', 'scientist'))
+    type = db.Column(db.Enum('regular_user', 'scientist'))
