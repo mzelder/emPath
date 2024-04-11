@@ -39,3 +39,45 @@ if missing_files:
         print(missing_file)
 else:
     print("Wszystkie pliki .jpg mają odpowiadające rekordy w pliku .json.")
+
+
+def get_all_files_in_folder(folder_path):
+    # Sprawdź, czy folder istnieje
+    if not os.path.exists(folder_path):
+        print(f"Folder '{folder_path}' nie istnieje.")
+        return []
+
+    # Pobierz listę plików w folderze
+    file_list = os.listdir(folder_path)
+
+    # Zwróć listę nazw plików
+    return file_list
+
+folder_path = 'db_files'
+
+# Wywołanie funkcji i wyświetlenie nazw plików
+file_names = get_all_files_in_folder(folder_path)
+
+def get_picture_ids_from_json(json_file_path):
+    # Sprawdź, czy plik .json istnieje
+    if not os.path.exists(json_file_path):
+        print(f"Plik '{json_file_path}' nie istnieje.")
+        return []
+
+    # Wczytaj dane z pliku .json
+    with open(json_file_path, 'r') as file:
+        json_data = json.load(file)
+
+    # Zbuduj listę Picture ID
+    picture_ids = [record['Picture ID'] for record in json_data]
+
+    return picture_ids
+picture_ids = get_picture_ids_from_json(json_file_path)
+
+# Utwórz listę nazw plików z folderu db_files
+db_files_list = os.listdir('db_files')
+
+# Porównaj listy i zwróć brakujące pliki
+missing_files = set(db_files_list) - set(picture_ids)
+
+picture_ids = get_picture_ids_from_json(json_file_path)
