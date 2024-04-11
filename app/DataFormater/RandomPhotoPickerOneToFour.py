@@ -40,23 +40,6 @@ def choose_correct_emotion():
     # Losuj 3 niepoprawne emocje z listy emocji
     emotions.remove(correct_emotion)
     incorrect_emotions = r.sample(emotions, 3)
-
-    # Drukuj pytanie
-    print(f"Jaką emocję wyraża obrazek o ID: {chosen_picture_id}?")
-    print(f") {correct_emotion.capitalize()}")
-    print(f") {incorrect_emotions[0].capitalize()}")
-    print(f") {incorrect_emotions[1].capitalize()}")
-    print(f") {incorrect_emotions[2].capitalize()}")
-
-    # Pobierz odpowiedź od użytkownika
-    user_answer = input("Wybierz poprawną odpowiedź: ")
-
-    # Sprawdź poprawność odpowiedzi
-    if user_answer.lower() == correct_emotion:
-        return True
-    else:
-        return False
-
-print(choose_correct_emotion())
+    return (correct_emotion, incorrect_emotions)
 
 

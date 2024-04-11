@@ -11,7 +11,7 @@
                             <div class="">
                                 <h2 class="fw-bold mb-2 text-uppercase">Sign Up</h2>
                                 <p class="text-black mt-5">Choose your username and password.</p>
-                                <form action="{{ url_for('home') }}" method="POST">
+                                <form action="{{ url_for('register') }}" method="POST">
                                     <div data-mdb-input-init class="form-outline form-white mb-4">
                                         <input type="text" name="username_signup" id="username_signup" class="form-control form-control-lg" required/>
                                         <label class="form-label mt-2 fw-bold" for="username_signup">Username</label>
@@ -25,8 +25,8 @@
                                         <label class="form-label mt-2 fw-bold" for="confirm_password">Confirm Password</label>
                                     </div>
                                     <div data-mdb-input-init class="form-outline form-white mb-4">
-                                        <input type="date" name="trip-start" id="start" class="form-control form-control-lg" 
-                                               value="" required/>
+                                        <input type="date" name="birth_year" id="start" class="form-control form-control-lg" 
+                                                required/>
                                         <label class="form-label mt-2 fw-bold" for="start">Birth Year</label>
                                     </div>
                                     <div data-mdb-input-init class="form-outline form-white mb-4">
