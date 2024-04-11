@@ -66,10 +66,11 @@ def home():
 
 @app.route("/test_form1", methods=['GET', 'POST'])
 def test_form1():
-    if int(request.form.get('POST')):
-        if 
+    #if int(request.form.get('POST')):
+    #    if 
     #flash(file.generate())
-    return render_template('test_form1.html')
+    #return render_template('test_form1.html')
+    pass
 
 
 @app.route("/results")
