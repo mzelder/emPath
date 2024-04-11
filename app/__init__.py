@@ -10,29 +10,44 @@ app.config["SECRET_KEY"] = "secret_key"
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db.sqlite3"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
+def create_account(uname, pwd):
+    pwd_hash = generate_password_hash(pwd)
+    new_user = UserServer(username=uname, password=pwd_hash)
+    db.session.add(new_user)
+    db.session.commit()
+
+
 db.init_app(app)
 with app.app_context():
     db.create_all()
 
 
-@app.route("/")
+@app.route("/", methods=['GET', 'POST'])
 def index():
-    return "Hi"
+    #if request.method == 'POST':
+     #   uname = request.form.get('username')
+      #  pwd = request.form.get('password')
+       # if uname in UserServer.query.all():
+            
+        return render_template('index.html')
 
 @app.route("/register", methods=['GET', 'POST'])
 def register():
-    #u, p = "abcdefgh", "zaq1@WSX"
+    u, p = "abcdefgasdfhasd", "zaqWSX"
     if request.method == 'GET':
-        if request.form.get('username') in UserServer.query.all(): #is there an account with this username?
-            return 'registration failed - account already exists' 
-        if re.match("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$", str(request.form.get('password'))):
+        exist_check = UserServer.query.filter_by(username=u).first()
+        if exist_check:
+            return 'registration failed - account already exists'            
+        if re.match("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$", p):
             # Minimum eight characters, at least one upper case English letter, one lower case English letter, one number and one special character
             # does the password match the regex?
+            create_account(u, p)
             return 'registration successful'
-            # CODE HERE TO INPUT DATA INTO DATABASE
         else:
             return 'registration failed - Password must match regex'
     return "?"
+
+
 
 @app.route("/results")
 def results():
