@@ -3,6 +3,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from models import db, User, UserServer
 import re
 from sqlalchemy import func
+import DataFormater.RandomPhotoPickerOneToFour as rpp
 
 # inicjalizacja aplikacji
 app = Flask(__name__)
@@ -116,8 +117,15 @@ def home():
 
 @app.route("/test_form1", methods=['GET', 'POST'])
 def test_form1():
+    random_tuple = rpp.choose_correct_emotion()
+    point_dict = {}
+    point_dict[str(random_tuple[0])] = 1
+    for i in range(0, len(random_tuple[1])):
+        point_dict[str(random_tuple[1][i])] = 0
     
-    pass
+    for k, v in point_dict.items():
+        print(k, v)
+    return str(random_tuple[0] + "   " + random_tuple[2])
 
 
 @app.route("/results")

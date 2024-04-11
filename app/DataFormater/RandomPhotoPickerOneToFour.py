@@ -40,6 +40,6 @@ def choose_correct_emotion():
     # Losuj 3 niepoprawne emocje z listy emocji
     emotions.remove(correct_emotion)
     incorrect_emotions = r.sample(emotions, 3)
-    return (correct_emotion, incorrect_emotions)
+    return (correct_emotion, incorrect_emotions, chosen_picture_id)
 
 
