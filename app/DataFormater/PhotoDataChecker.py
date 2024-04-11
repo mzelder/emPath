@@ -6,7 +6,9 @@ def check_picture_ids(jpg_files, json_data):
     missing_files = [jpg_file for jpg_file in jpg_files if jpg_file not in picture_ids]
     return missing_files
 
-folder_path = 'db_files'  # Ścieżka do folderu z plikami
+#os.chdir('..')
+print(os.path.join(os.getcwd(), 'app', 'static', 'db_files'))
+folder_path = os.path.join(os.getcwd(), 'app', 'static', 'db_files')  # Ścieżka do folderu z plikami
 json_file_path = 'textformated.json'  # Ścieżka do pliku .json
 
 # Sprawdź, czy folder istnieje
@@ -75,7 +77,7 @@ def get_picture_ids_from_json(json_file_path):
 picture_ids = get_picture_ids_from_json(json_file_path)
 
 # Utwórz listę nazw plików z folderu db_files
-db_files_list = os.listdir('db_files')
+db_files_list = os.listdir(os.path.join(os.getcwd(), 'app', 'static', 'db_files'))
 
 # Porównaj listy i zwróć brakujące pliki
 missing_files = set(db_files_list) - set(picture_ids)
