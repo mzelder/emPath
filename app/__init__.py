@@ -21,10 +21,11 @@ def index():
 
 @app.route("/register", methods=['GET', 'POST'])
 def register():
+    #u, p = "abcdefgh", "zaq1@WSX"
     if request.method == 'GET':
         if request.form.get('username') in UserServer.query.all(): #is there an account with this username?
-            return 'registration failed - account already exists'
-        if re.match("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$", request.form.get('password')):
+            return 'registration failed - account already exists' 
+        if re.match("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$", str(request.form.get('password'))):
             # Minimum eight characters, at least one upper case English letter, one lower case English letter, one number and one special character
             # does the password match the regex?
             return 'registration successful'

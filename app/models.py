@@ -18,7 +18,7 @@ class Training_Session(db.Model):
     __tablename__ = "training_sessions"
     id = db.Column(db.Integer, primary_key=True)
     userId = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False)
-
+    resourceId = db.Column(db.Integer, db.ForeignKey('resources.id'), nullable=False)
     # Typ sesji treningowej. Możliwe wartości:
     # diagnosis lub training. Gdzie diagnoza
     # rozumiana jest jako pierwsza sesja
