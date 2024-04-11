@@ -17,8 +17,8 @@ class User(db.Model):
 class Training_Session(db.Model):
     __tablename__ = "training_sessions"
     sessionId = db.Column(db.Integer, primary_key=True) #Identyfikator sesji treningowej.
-    userId = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False) #Identyfikator użytkownika.
-    resourceId = db.Column(db.Integer, db.ForeignKey('resources.id'), nullable=False) #Identyfikator zasobu.
+    userId = db.Column(db.Integer, db.ForeignKey("users.userId"), nullable=False) #Identyfikator użytkownika.
+    resourceId = db.Column(db.Integer, db.ForeignKey('resources.resourceId'), nullable=False) #Identyfikator zasobu.
     type = db.Column(db.Enum('diagnosis', 'training'), nullable=False) #Typ sesji treningowej. Możliwe wartości: diagnosis lub training. Gdzie diagnoza rozumiana jest jako pierwsza sesja
     age = db.Column(db.Integer, nullable=False) #Wiek w czasie rozpoczęcia sesji treningowej.
     startedAt = db.Column(db.DateTime(), nullable=False) #Data i czas rozpoczęcia sesji treningowej.
@@ -36,8 +36,8 @@ class Resource(db.Model):
 class Training_Session_Result(db.Model):
     __tablename__ = "training_session_result"
     resultId = db.Column(db.Integer, primary_key=True) #Identyfikator wyniku ćwiczenia.
-    sessionId = db.Column(db.Integer, db.ForeignKey('training_sessions.id'), nullable=False) #Identyfikator sesji treningowej.
-    resourceId = db.Column(db.Integer, db.ForeignKey('resources.id'), nullable=False) #Identyfikator zasobu.
+    sessionId = db.Column(db.Integer, db.ForeignKey('training_sessions.sessionId'), nullable=False)
+    resourceId = db.Column(db.Integer, db.ForeignKey('resources.resourceId'), nullable=False)
     recognizedEmotion = db.Column(db.Enum('neutral', 'joy', 'disgust', 'surprise', 'fear', 'sadness', 'anger'), nullable=False) #Emocja rozpoznawana przez użytkownika.
     startedAt = db.Column(db.DateTime(), nullable=False) #Data i czas rozpoczęcia sesji treningowej.
     endedAt = db.Column(db.DateTime(), nullable=False) #Data i czas zakończenia sesji treningowej.
@@ -48,4 +48,4 @@ class UserServer(db.Model):
     username = db.Column(db.String(50), nullable=False)
     password = db.Column(db.String(20), nullable=False)
     type = db.Column(db.Enum('user', 'scientist'))
-    userId = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False)
+    userId = db.Column(db.Integer, db.ForeignKey("users.userId"), nullable=False)
