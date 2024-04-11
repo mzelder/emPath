@@ -3,6 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
 
+
 # modale do zwrotu
 class User(db.Model):
     __tablename__ = "users"
@@ -32,3 +33,11 @@ class Resource(db.Model):
     name = db.Column(db.String(50), nullable=False)
     type = db.Column(db.String(50), nullable=False)
     training_sessions = db.relationship("Training_Session", backref="resource", lazy=True)
+
+
+class UserServer(db.Model):
+    __tablename__ = "login_validation"
+    id = db.Column(db.Integer, db.ForeignKey("users.id") primary_key = True)
+    username = db.Column(db.String(50), nullable=False)
+    password = db.Column(db.String(20), nullable=False)
+    type = db.Column(db.Enum('regular user', 'scientist'))
