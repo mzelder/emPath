@@ -124,7 +124,7 @@ def register():
 def home():
     if request.method == 'POST':
         next_form = str(request.form.get('form_value'))
-        redirect(url_for(next_form))
+        return redirect(url_for(next_form))
     return render_template('home.html')
 
 @login_required
