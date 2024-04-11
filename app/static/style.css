@@ -1,0 +1,36 @@
+/* Custom navbar styling */
+.navbar-custom {
+    background-color: white; /* Custom color */
+    
+}
+.nav-link {
+    color: grey; /* Dark grey for contrast */
+}
+.nav-link:hover {
+    color: #41C9E2; /* Change color on hover */
+}
+.navbar-brand {
+    color: black; /* Custom color for the brand/logo */
+}
+.navbar-brand:hover {
+    color: #B1A296; /* Lighter shade on hover */
+}
+
+body {
+    background: linear-gradient(to bottom, #008DDA 0%, #41C9E2 100%);
+}
+
+.login-button {
+    background-color: #41C9E2; /* Custom color */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Padding */
+    margin-top: 10px; /* Spacing */
+}
+
+.login-button:hover {
+    background-color: #008DDA; /* Darker shade on hover */
+    color: white;
+}
+    
