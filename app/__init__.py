@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request, abort, session, redirect, url_for, flash
 from werkzeug.security import generate_password_hash, check_password_hash
 from models import db, User
+import pandas
+import excel_fetch
 
 # inicjalizacja aplikacji
 app = Flask(__name__)
@@ -15,7 +17,7 @@ with app.app_context():
 
 @app.route("/")
 def index():
-    return "TEST3"
+    return excel_fetch.test()
 
 if __name__ == "__main__":
     app.run(debug=True)
