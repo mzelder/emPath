@@ -122,9 +122,9 @@ def register():
             create_account(u, p, birth_year, sex, residency, account_type)              # allow creation
             return redirect(url_for('home'))  
         elif account_type == 'scientist':
-            create_account(u, p, account_type='scientist')              # allow creation
+            create_account(u, p, account_type='scientist')                              # allow creation
             return redirect(url_for('home'))                           
-    return render_template("register.html")                                                        # unknown error
+    return render_template("register.html")                                             # unknown error
 
 
 @app.route("/home", methods=['GET', 'POST'])
@@ -147,12 +147,14 @@ def quiz1():
 
     if request.method == 'POST':
         ans = str(request.form.get('answer'))  # Convert answer to integer directly
-        session['q1_question_sequence'].append((session['q1_question_count'], ans))
+        correct_answer = session.get('q1_correct_answer')
+        session['q1_question_sequence'].append((session['q1_question_count'], ans, correct_answer))
         session['q1_question_count'] += 1
         return redirect(url_for('quiz1'))
     
     if session['q1_question_count'] < 20:
         random_tuple = q1handle.choose_correct_emotion()
+        session['q1_correct_answer'] = random_tuple[0]
         point_dict = {str(random_tuple[0]): 1}
 
         for item in random_tuple[1]:
@@ -163,7 +165,7 @@ def quiz1():
 
         print(emotions, random_tuple[2], random_tuple[0])
 
-        return render_template('quiz1.html', i=session['q1_question_count'], emotions=emotions,     =random_tuple[2])
+        return render_template('quiz1.html', i=session['q1_question_count'], emotions=emotions, img_src=random_tuple[2])
     else:
         return redirect(url_for('results'))
     
@@ -189,7 +191,7 @@ def quiz2():
 @app.route("/results")
 @login_required
 def results():
-    return "results xd"
+    return session['q1_question_sequence']
 
 
 @app.route("/account")
