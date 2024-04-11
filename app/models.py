@@ -48,4 +48,4 @@ class UserServer(db.Model):
     username = db.Column(db.String(50), nullable=False)
     password = db.Column(db.String(20), nullable=False)
     type = db.Column(db.Enum('user', 'scientist'))
-    userId = db.Column(db.Integer, db.ForeignKey("users.userId"), nullable=False)
+    userId = db.Column(db.Integer, db.ForeignKey("users.userId"), nullable=True)

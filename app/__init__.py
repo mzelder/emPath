@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, abort, session, redirect, url
 from werkzeug.security import generate_password_hash, check_password_hash
 from models import db, User, UserServer
 import re
+from sqlalchemy import func
 
 # inicjalizacja aplikacji
 app = Flask(__name__)
@@ -11,11 +12,17 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 def create_account(uname, pwd, birth_year=None, residency=None, sex=None, account_type=None):
     pwd_hash = generate_password_hash(pwd)
-    new_user_server = UserServer(username=uname, password=pwd_hash, type=account_type) #login data for the user
-    db.session.add(new_user_server)
     if account_type == 'user':
+        print("siema")
         new_user_data = User(birthYear = birth_year, sex=sex, placeOfResidence=residency) #personal data of the user
         db.session.add(new_user_data)
+        fresh_user = db.session.query(func.max(User.userId)).scalar()
+        new_user_server = UserServer(username=uname, password=pwd_hash, type=account_type, userId=fresh_user) #login data for the user
+        db.session.add(new_user_server)
+    else:
+        new_user_server = UserServer(username=uname, password=pwd_hash, type=account_type) #login data for the user
+        db.session.add(new_user_server)
+
     db.session.commit() #adding user into login db and data db
 
 def map_residency_vals(val):
@@ -63,11 +70,12 @@ def register():
         
         print(u, p, pc)
         account_type = session['user_type']
-        birth_year = int(str(request.form.get('birth_year'))[:4])  # parsing birth year from birth date
-        sex = str(request.form.get('gender'))   
+        if account_type == 'user': #not 'scientist'
+            birth_year = int(str(request.form.get('birth_year'))[:4])  # parsing birth year from birth date
+            sex = str(request.form.get('gender'))   
 
-        residency = int(str(request.form.get('residence')))        # parsing residency based on html form
-        residency = map_residency_vals(residency)
+            residency = int(str(request.form.get('residence')))        # parsing residency based on html form
+            residency = map_residency_vals(residency)
 
         #u, p, pc = '', 'zaq1@WSX', 'zaq1@WSX'
 
@@ -75,22 +83,30 @@ def register():
 
         # validation starts here
         if len(u) == 0:                                               # null username
-            return 'registration failed! - username cannot be null'
+            flash(message='Username cannot be empty.', category=None)
+            return redirect(url_for('register'))
         if p != pc:                                                   # incorrect pwd == pwdconfirm
-            return 'registration failed - passwords are not the same!' 
+            flash(message='Passwords have to match.', category=None)
+            return redirect(url_for('register'))
         
         exist_check = UserServer.query.filter_by(username=u).first()  # does the account already exist?
         if exist_check:
-            return 'registration failed - account already exists'          
+            flash(message='Account with this username already exists.', category=None)
+            return redirect(url_for('register'))          
         
                                                                       # does the password match the regex?
         if not re.match("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$", p):
             # min. 8 chars, >=1 upper case English letter, >=1 lower case English letter, 
             # >=1 number and >=1 special character
-            return 'registration failed - Password must match regex'
+            flash(message='Password must include: min. 8 characters: 1 uppercase, 1 lowercase, 1 digit, 1 special.', category=None)
+            return redirect(url_for('register'))
         
-        create_account(u, p, birth_year, sex, residency, account_type)              # allow creation
-        return redirect(url_for('home'))                            
+        if account_type == 'user':
+            create_account(u, p, birth_year, sex, residency, account_type)              # allow creation
+            return redirect(url_for('home'))  
+        elif account_type == 'scientist':
+            create_account(u, p, account_type='scientist')              # allow creation
+            return redirect(url_for('home'))                           
     return render_template("register.html")                                                        # unknown error
 
 
