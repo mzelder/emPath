@@ -146,7 +146,7 @@ def quiz1():
         session['q1_question_count'] = 0
 
     if request.method == 'POST':
-        ans = int(request.form.get('answer'))  # Convert answer to integer directly
+        ans = str(request.form.get('answer'))  # Convert answer to integer directly
         session['q1_question_sequence'].append((session['q1_question_count'], ans))
         session['q1_question_count'] += 1
         return redirect(url_for('quiz1'))
