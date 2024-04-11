@@ -128,8 +128,8 @@ def home():
     return render_template('home.html')
 
 @login_required
-@app.route("/test_form1", methods=['GET', 'POST'])
-def test_form1():
+@app.route("/quiz1", methods=['GET', 'POST'])
+def quiz_form1():
     random_tuple = rpp.choose_correct_emotion()
     point_dict = {}
     point_dict[str(random_tuple[0])] = 1
@@ -139,7 +139,7 @@ def test_form1():
     
     for k, v in point_dict.items():  #debug
         print(k, v)         
-    return str(random_tuple[0] + "   " + random_tuple[2])
+    return render_template("quiz1.html")
 
 @login_required
 @app.route("/results")
