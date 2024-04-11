@@ -174,7 +174,7 @@ def quiz1():
 
         return render_template('quiz1.html', i=session['q1_question_count'], emotions=emotions, img_src=random_tuple[2])
     else:
-        return redirect(url_for('results'))
+        return redirect(url_for('results', quiz_no=1))
     
     
         
@@ -190,15 +190,13 @@ def quiz2():
 
     for i in range(0, len(random_tuple[1])):
         point_dict[str(random_tuple[1][i])] = 0
-    
-    for k, v in point_dict.items():  #debug
-        print(k, v)         
+   
     return render_template("quiz1.html")
 
 @app.route("/results")
 @login_required
-def results():
-    return session['q1_question_sequence']
+def results(quiz_no):
+    return session[f'q{quiz_no}_question_sequence']
 
 
 @app.route("/account")
