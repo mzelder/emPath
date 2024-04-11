@@ -33,13 +33,19 @@ def index():
         flash(message="Invalid username or password.", category=None)       
     return render_template('index.html')
 
-@app.route("/who_are_you", methods=['GET', 'POST'])
+@app.route("/who-are-you", methods=['GET', 'POST'])
 def who_are_you():
     if request.method == 'POST':
         val = str(request.form.get('role'))
         if val == 'user' or val == 'scientist':
             return val
         return "Incorrect value."
+    return render_template('choose.html')
+
+@app.route("/register1", methods=['GET', 'POST'])
+def register1():
+    return render_template('register.html')
+
 
 @app.route("/register", methods=['GET', 'POST'])
 def register():
@@ -67,7 +73,7 @@ def home():
 @app.route("/test_form1", methods=['GET', 'POST'])
 def test_form1():
     if int(request.form.get('POST')):
-        if 
+        pass
     #flash(file.generate())
     return render_template('test_form1.html')
 
