@@ -137,7 +137,7 @@ def home():
 
 
 @app.route("/quiz1", methods=['GET', 'POST'])
-@login_required
+#@login_required
 def quiz1():
     if 'q1_question_sequence' not in session:
         session['q1_question_sequence'] = []
@@ -163,7 +163,7 @@ def quiz1():
 
         print(emotions, random_tuple[2], random_tuple[0])
 
-        return render_template('quiz1.html', i=session['q1_question_count'], emotions=emotions, img_src=random_tuple[2])
+        return render_template('quiz1.html', i=session['q1_question_count'], emotions=emotions,     =random_tuple[2])
     else:
         return redirect(url_for('results'))
     
