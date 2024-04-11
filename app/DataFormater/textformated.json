@@ -4,7 +4,7 @@
         "Picture ID": "AD_7885.jpg",
         "Male/ Female": "F",
         "Display": "neutral",
-        "Agreement (%)": 53,
+        "Agreement (%)": 10,
         "Putity (0-1)": "x",
         "Intensity (0-1)": "x",
         "N": 17,
@@ -2297,5 +2297,16 @@
         "Intensity (0-1)": 0.65,
         "N": 24,
         "FACS ": "1B+15C"
+    },
+    {
+        "Displayer ID":"SS",
+        "Picture ID":"SS_1188.jpg",
+        "Male/ Female":"F",
+        "Display":"fear",
+        "Agreement (%)":84,
+        "Putity (0-1)":0.69,
+        "Intensity (0-1)":0.78,
+        "N":31,
+        "FACS ":"1D+4A+5D+11B+25D"
     }
 ]
