@@ -29,7 +29,11 @@ def index():
       #  pwd = request.form.get('password')
        # if uname in UserServer.query.all():
             
-        return render_template('index.html')
+        return render_template('choose.html')
+
+@app.route("/login", methods=['GET', 'POST'])
+def who_are_you():
+    pass
 
 @app.route("/register", methods=['GET', 'POST'])
 def register():

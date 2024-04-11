@@ -33,4 +33,11 @@ body {
     background-color: #008DDA; /* Darker shade on hover */
     color: white;
 }
-    
+/* Base styles for hover effect */
+.hover-effect-left:hover {
+    background-color: rgb(190, 40, 40)
+}
+
+.hover-effect-right:hover {
+    background-color: grey;
+}

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Choose{% endblock %}
+{% block body %}
+    <h1 class="text-center mt-5 text-white">Who are you?</h1>
+    <div class="row text-center mt-5 text-black p-5">
+        <div class="col">
+            <div class="container-fluid mt-3">
+                <form action="{{  url_for('who_are_you')  }}" method="POST">
+                    <input type="hidden" name="role" value="user">
+                    <button class="container bg-white w-75 rounded-3 p-5 border-0 hover-effect-left" type="submit" style="cursor:pointer;">
+                        <img src="/static/images/group.png" class="img-fluid" alt="group" width="100px" style="max-height: 100px;">
+                        <h2 class="mt-5">User</h2>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="col">
+            <div class="container-fluid mt-3">
+                <form action="{{  url_for('who_are_you')  }}" method="POST">
+                    <input type="hidden" name="role" value="scientist">
+                    <button class="container bg-white w-75 rounded-3 p-5 border-0 hover-effect-left" type="submit" style="cursor:pointer;">
+                        <img src="/static/images/data-scientist.png" class="img-fluid" alt="group" width="100px" style="max-height: 100px;">
+                        <h2 class="mt-5">User</h2>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
