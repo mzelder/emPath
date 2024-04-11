@@ -49,10 +49,11 @@ def who_are_you():
     if request.method == 'POST':
         val = str(request.form.get('role'))
         if val == 'user' or val == 'scientist':
+            print("siema")
             session['user_type'] = val
-            return url_for('register')
+            return redirect(url_for('register'))
+    return render_template('choose.html')
         
-
 @app.route("/register", methods=['GET', 'POST'])
 def register():
     #if request.method == 'GET':
@@ -87,8 +88,8 @@ def register():
             return 'registration failed - Password must match regex'
         
         create_account(u, p, birth_year, sex, residency, account_type)              # allow creation
-        return render_template('home.html')
-    return "?"                                                        # unknown error
+        return redirect(url_for('home'))                            
+    return render_template("register.html")                                                        # unknown error
 
 
 @app.route("/home")
