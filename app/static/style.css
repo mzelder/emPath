@@ -12,9 +12,6 @@
 .navbar-brand {
     color: black; /* Custom color for the brand/logo */
 }
-.navbar-brand:hover {
-    color: #B1A296; /* Lighter shade on hover */
-}
 
 body {
     background: linear-gradient(to bottom, #41C9E2 0%, white 100%);
@@ -43,7 +40,7 @@ body {
 }
 
 /* Base style for the buttons */
-.container.bg-white {
+.cool-hover {
     overflow: hidden; /* Ensure the border animation doesn't extend outside the button */
     position: relative; /* For positioning the pseudo-elements */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for transform and shadow */
@@ -51,13 +48,13 @@ body {
 }
 
 /* Animation on hover */
-.container.bg-white:hover {
+.cool-hover:hover {
     transform: scale(1.05); /* Scale the button up */
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
 }
 
 /* Dynamic border animation */
-.container.bg-white::before {
+.cool-hover::before {
     content: '';
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
@@ -67,7 +64,10 @@ body {
 }
 
 /* Ensuring content is not selectable for better UX during the animation */
-.container.bg-white * {
+.cool-hover * {
     pointer-events: none;
 }
 
+.fixed-btn {
+    width: 250px;
+}
