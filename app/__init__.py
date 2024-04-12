@@ -28,10 +28,6 @@ db.init_app(app)
 with app.app_context():
     db.create_all()
 
-
-
-
-
 @app.route("/signout")
 def signout():
     session.clear()
@@ -69,9 +65,6 @@ def map_residency_vals(val):
         4: "city >100k"
     }
     return residency_mapping.get(val, "unknown")
-
-
-
 
 @app.route("/", methods=['GET', 'POST'])
 def index():
@@ -247,6 +240,16 @@ def quiz2():
     else:
         session['quiz_redirect'] = 2
         return redirect(url_for('results'))
+    
+@app.route("/quiz3", methods=['GET', 'POST'])
+#@login_required
+def quiz3():
+    return render_template('quiz3.html')
+
+@app.route("/quiz4", methods=['GET', 'POST'])
+#@login_required
+def quiz4():
+    return render_template('quiz4.html')
 
 
 @app.route("/quiz3", methods=['GET', 'POST'])
