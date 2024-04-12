@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, abort, session, redirect, url_for, flash, send_from_directory
 from werkzeug.security import generate_password_hash, check_password_hash
-from models import db, User, UserServer
+from models import db, User, UserServer, Training_Session_Result
 import re
 import os
 import pandas as pd
@@ -15,12 +15,21 @@ import DataFormater.Random4Photos1Emotion as q2handle
 from functools import wraps
 import random as r
 import math as m
+from flask_sqlalchemy import SQLAlchemy
 
 # inicjalizacja aplikacji
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "secret_key"
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db.sqlite3"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+
+db.init_app(app)
+with app.app_context():
+    db.create_all()
+
+
+
+
 
 @app.route("/signout")
 def signout():
@@ -37,6 +46,7 @@ def login_required(f):
 
 def create_account(uname, pwd, birth_year=None, residency=None, sex=None, account_type=None):
     pwd_hash = generate_password_hash(pwd)
+    uname_hash = generate_password_hash(uname)
     if account_type == 'user':
         print("siema")
         new_user_data = User(birthYear = birth_year, sex=sex, placeOfResidence=residency) #personal data of the user
@@ -45,7 +55,7 @@ def create_account(uname, pwd, birth_year=None, residency=None, sex=None, accoun
         new_user_server = UserServer(username=uname, password=pwd_hash, type=account_type, userId=fresh_user) #login data for the user
         db.session.add(new_user_server)
     else:
-        new_user_server = UserServer(username=uname, password=pwd_hash, type=account_type) #login data for the user
+        new_user_server = UserServer(username=uname_hash, password=pwd_hash, type=account_type) #login data for the user
         db.session.add(new_user_server)
 
     db.session.commit() #adding user into login db and data db
@@ -59,9 +69,7 @@ def map_residency_vals(val):
     }
     return residency_mapping.get(val, "unknown")
 
-db.init_app(app)
-with app.app_context():
-    db.create_all()
+
 
 
 @app.route("/", methods=['GET', 'POST'])
@@ -71,8 +79,9 @@ def index():
         user = UserServer.query.filter_by(username=uname).first()
         if user and check_password_hash(user.password, pwd):
             session["current_user"] = uname
+            session["user_type"] = user.type
             return render_template('home.html')
-        flash(message="Invalid username or password.", category="danger")       
+        flash(message=f"Invalid username or password.", category="danger")       
     return render_template('index.html')
 
 @app.route("/who-are-you", methods=['GET', 'POST'])
@@ -147,6 +156,9 @@ def home():
 @app.route("/quiz1", methods=['GET', 'POST'])
 #@login_required
 def quiz1():
+    if 'q1_time_start' not in session:
+        session['q1_time_start'] = db.session.query(func.now()).scalar()
+
     if 'q1_question_sequence' not in session:
         session['q1_question_sequence'] = []
 
@@ -205,10 +217,24 @@ def quiz2():
 def results():
     d = {}
     for el in session["q" + str(session['quiz_redirect']) + "_question_sequence"]:
-        d[el[0]] = el[1] == el[2]
+        d[el[0] + 1] = el[1] == el[2]
     score = sum(d.values())
     perc = m.ceil(sum(d.values()) / len(d.items()) * 100)
-    print(d, score, perc, len(d.items()))
+
+    curr_user = UserServer.query.filter_by(username=session["current_user"]).first()
+    last_session = Training_Session_Result.query.filter_by(userId=curr_user.userId).first()
+    if last_session:
+        session_type = 'training'
+    else:
+        session_type = 'diagnosis'
+
+    new_session = Training_Session_Result(userId=curr_user.userId, startedAt=session['q1_time_start'],\
+                                           endedAt=db.session.query(func.now()).scalar(), type=session_type,\
+                                            score=score)
+    
+    db.session.add(new_session)
+    db.session.commit()
+
     return render_template("results.html", questions=d, score=score, perc=perc, total_questions=len(d.items()))
 
 
