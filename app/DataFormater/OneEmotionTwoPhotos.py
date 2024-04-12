@@ -36,7 +36,6 @@ def get_random_picture_ids_by_emotion(json_file_path):
 def get_output():
     return get_random_picture_ids_by_emotion(json_file_path)
 
-print(get_output())
 
 
 
