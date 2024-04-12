@@ -247,19 +247,14 @@ def results():
 @app.route("/profile")
 @login_required
 def profile():
-
     curr_user = UserServer.query.filter_by(username=session["current_user"]).first()
     training_sessions = Training_Session_Result.query.filter_by(userId=curr_user.id).all()
     params = []
-    for el in training_sessions:
-        params.append([training_sessions.index(el) + 1, el.endedAt, el.score, el.total_score, m.ceil(el.score/el.total_score*100)])
+    for i in range(len(training_sessions)):
+        params.append([i + 1, training_sessions[i].endedAt, training_sessions[i].score, training_sessions[i].total_score,\
+                       m.ceil(training_sessions[i].score/training_sessions[i].total_score*100)])
     print(params)
     return render_template("profile.html", params=params)
-
-@app.route("/profile")
-#@login_required
-def profile():
-    return render_template("profile.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
