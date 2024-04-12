@@ -32,6 +32,7 @@ class Training_Session_Result(db.Model):
     endedAt = db.Column(db.DateTime(), nullable=False) #Data i czas zakończenia sesji treningowej.
     type = db.Column(db.Enum('diagnosis', 'training'), nullable=False)
     score = db.Column(db.Integer, nullable = False)
+    total_score = db.Column(db.Integer, nullable = False)
 
 class UserServer(db.Model):
     __tablename__ = "login_validation"

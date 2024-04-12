@@ -158,7 +158,7 @@ def home():
 #@login_required
 def quiz1():
     if 'q1_time_start' not in session:
-        session['q1_time_start'] = db.session.query(func.now()).scalar()
+        session['q1_time_start'] = db.session.query(func.now()).scalar().astimezone()
 
     if 'q1_question_sequence' not in session:
         session['q1_question_sequence'] = []
@@ -214,7 +214,7 @@ def quiz2():
     return render_template("quiz1.html")
 
 @app.route("/results")
-#@login_required
+@login_required
 def results():
     d = {}
     for el in session["q" + str(session['quiz_redirect']) + "_question_sequence"]:
@@ -230,8 +230,9 @@ def results():
         session_type = 'diagnosis'
 
     new_session = Training_Session_Result(userId=curr_user.userId, startedAt=session['q1_time_start'],\
-                                           endedAt=db.session.query(func.now()).scalar(), type=session_type,\
-                                            score=score)
+                                           endedAt=db.session.query(func.now()).scalar(), \
+                                            type=session_type,\
+                                            score=score, total_score = len(d.items()))
     
     db.session.add(new_session)
     db.session.commit()
@@ -243,10 +244,17 @@ def results():
     return render_template("results.html", questions=d, score=score, perc=perc, total_questions=len(d.items()))
 
 
-@app.route("/account")
-#@login_required
-def account():
-    pass
+@app.route("/profile")
+@login_required
+def profile():
+
+    curr_user = UserServer.query.filter_by(username=session["current_user"]).first()
+    training_sessions = Training_Session_Result.query.filter_by(userId=curr_user.id).all()
+    params = []
+    for el in training_sessions:
+        params.append([el.endedAt, el.score, el.total_score, m.ceil(el.score/el.total_score*100)])
+    print(params)
+    return render_template("profile.html", params=params)
 
 @app.route("/profile")
 #@login_required
