@@ -7,7 +7,6 @@ def check_picture_ids(jpg_files, json_data):
     return missing_files
 
 #os.chdir('..')
-print(os.path.join(os.getcwd(), 'app', 'static', 'db_files'))
 folder_path = os.path.join(os.getcwd(), 'app', 'static', 'db_files')  # Ścieżka do folderu z plikami
 json_file_path = 'textformated.json'  # Ścieżka do pliku .json
 
@@ -29,13 +28,6 @@ with open(json_file_path, 'r') as file:
 # Sprawdź, czy każdy plik .jpg ma odpowiadający rekord w pliku .json
 missing_files = check_picture_ids(jpg_files, json_data)
 
-# Wyświetl pliki .jpg, których brakuje w pliku .json
-if missing_files:
-    print("Pliki .jpg, których brakuje w pliku .json:")
-    for missing_file in missing_files:
-        print(missing_file)
-else:
-    print("Wszystkie pliki .jpg mają odpowiadające rekordy w pliku .json.")
 
 
 def get_all_files_in_folder(folder_path):
@@ -49,8 +41,6 @@ def get_all_files_in_folder(folder_path):
 
     # Zwróć listę nazw plików
     return file_list
-
-folder_path = 'db_files'
 
 # Wywołanie funkcji i wyświetlenie nazw plików
 file_names = get_all_files_in_folder(os.path.join(os.getcwd(), 'app', 'static', 'db_files'))
@@ -75,6 +65,19 @@ picture_ids = get_picture_ids_from_json(json_file_path)
 db_files_list = os.listdir(os.path.join(os.getcwd(), 'app', 'static', 'db_files'))
 
 # Porównaj listy i zwróć brakujące pliki
-missing_files = set(db_files_list) - set(picture_ids)
+
 
 picture_ids = get_picture_ids_from_json(json_file_path)
+
+
+with open('valid_records.txt', 'r') as file:
+# Wczytaj wszystkie linie pliku do listy
+    lines = file.readlines()
+
+    # Usuń z listy linie zawierające Picture ID z listy missing_files
+lines = [line.strip() for line in lines if line.strip() not in missing_files]
+
+    # Otwórz plik valid_records.txt w trybie zapisu
+with open('valid_records.txt', 'w') as file:
+     # Zapisz zmienione linie z powrotem do pliku
+    file.write('\n'.join(lines))

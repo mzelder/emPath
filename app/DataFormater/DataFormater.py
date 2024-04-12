@@ -33,5 +33,3 @@ processed_data = process_records(data)
 
 with open('textformated.json', 'w') as file:
     json.dump(processed_data, file, indent=4)
-
-print("Dane zostały zapisane do pliku 'textformated.json'.")

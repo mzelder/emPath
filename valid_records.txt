@@ -35,7 +35,6 @@ JG_1632.jpg
 JG_2291.jpg
 JS_0008.jpg
 JS_0281.jpg
-JS_0491.jpg
 JS_0744.jpg
 JS_1601.jpg
 JS_2296.jpg
@@ -95,7 +94,6 @@ MG_0754.jpg
 MG_0928.jpg
 MG_1069.jpg
 MG_1280.jpg
-MG_1317.jpg
 MJ_0066.jpg
 MJ_0152.jpg
 MJ_0271.jpg
@@ -195,7 +193,6 @@ RB_0392.jpg
 RB_0458.jpg
 RB_0586.jpg
 SO_0028.jpg
-SO_0052.jpg
 SO_0071.jpg
 SO_0223.jpg
 SO_0893.jpg
