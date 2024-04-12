@@ -160,8 +160,8 @@ def home():
 @app.route("/quiz1", methods=['POST', "GET"])
 #@login_required
 def quiz1():
-    if request.method == "GET":
-        return redirect(url_for('home'))
+    #if request.method == "GET":
+    #    return redirect(url_for('home'))
     
     if 'q1_time_start' not in session:
         session['q1_time_start'] = db.session.query(func.now()).scalar().astimezone()
@@ -207,17 +207,45 @@ def download_db():
     
 
 
-@app.route("/quiz2", methods=['GET', 'POST'])
+@app.route("/quiz2", methods=['POST', "GET"])
 @login_required
 def quiz2():
-    random_tuple = q2handle.generate_output()
-    point_dict = {}
-    point_dict[str(random_tuple[0])] = 1
+    #if request.method == "GET":
+    #    return redirect(url_for('home'))
+    
+    if 'q2_time_start' not in session:
+        session['q2_time_start'] = db.session.query(func.now()).scalar().astimezone()
 
-    for i in range(0, len(random_tuple[1])):
-        point_dict[str(random_tuple[1][i])] = 0
-   
-    return render_template("quiz1.html")
+    if 'q2_question_sequence' not in session:
+        session['q2_question_sequence'] = []
+
+    if 'q2_question_count' not in session:
+        session['q2_question_count'] = 0
+
+    if request.method == 'POST':
+        ans = str(request.form.get('answer'))  # Convert answer to integer directly
+        correct_answer = session.get('q2_correct_answer')
+        session['q2_question_sequence'].append((session['q2_question_count'], ans, correct_answer))
+        session['q2_question_count'] += 1
+        return redirect(url_for('quiz2'))
+    
+    if session['q2_question_count'] < 20:
+        random_tuple = q2handle.generate_output()
+        session['q2_correct_answer'] = random_tuple[0]
+        point_dict = {str(random_tuple[0]): 1}
+
+        for item in random_tuple[1]:
+            point_dict[str(item)] = 0
+
+        photos = list(point_dict.keys())
+        r.shuffle(photos)
+
+        print(photos, random_tuple[2], random_tuple[0])
+
+        return render_template('quiz2.html', i=session['q2_question_count'], photos=photos, emotion=random_tuple[2])
+    else:
+        session['quiz_redirect'] = 2
+        return redirect(url_for('results'))
 
 @app.route("/results")
 @login_required
