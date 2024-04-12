@@ -74,6 +74,9 @@ def map_residency_vals(val):
 
 @app.route("/", methods=['GET', 'POST'])
 def index():
+    if session.get('current_user'):
+        return redirect(url_for('home'))
+    
     if request.method == 'POST':
         uname, pwd = str(request.form.get('username')), str(request.form.get('password'))
         user = UserServer.query.filter_by(username=uname).first()
@@ -154,9 +157,12 @@ def home():
     return render_template('home.html')
 
 
-@app.route("/quiz1", methods=['GET', 'POST'])
+@app.route("/quiz1", methods=['POST', "GET"])
 #@login_required
 def quiz1():
+    if request.method == "GET":
+        return redirect(url_for('home'))
+    
     if 'q1_time_start' not in session:
         session['q1_time_start'] = db.session.query(func.now()).scalar().astimezone()
 
