@@ -13,7 +13,7 @@ from sqlalchemy import func
 import DataFormater.RandomPhotoPickerOneToFour as q1handle
 import DataFormater.Random4Photos1Emotion as q2handle
 import DataFormater.OneEmotionTwoPhotos as q3handle
-
+import DataFormater.OnePhotoOneIntensity as q4handle
 from functools import wraps
 import random as r
 import math as m
@@ -287,7 +287,8 @@ def quiz3():
 def quiz4():
     #if request.method == "GET":
     #    return redirect(url_for('home'))
-    
+    # print(session['q4_question_count'])
+
     if 'q4_time_start' not in session:
         session['q4_time_start'] = db.session.query(func.now()).scalar().astimezone()
 
@@ -300,25 +301,19 @@ def quiz4():
     if request.method == 'POST':
         ans = float(request.form.get('range-q4'))  # Convert answer to integer directly
         correct_answer = session.get('q4_correct_answer')
-        session['q4_question_sequence'].append((session['q3_question_count'], ans, correct_answer))
+        print(correct_answer)
+        session['q4_question_sequence'].append((session['q4_question_count'], ans, correct_answer))
         session['q4_question_count'] += 1
         return redirect(url_for('quiz4'))
     
     if session['q4_question_count'] < 15:
         random_tuple = q4handle.get_output()
-        session['q4_correct_answer'] = random_tuple[0]
-        point_dict = {str(random_tuple[0]): 1}
-
-        for item in random_tuple[1]:
-            point_dict[str(item)] = 0
-
-        photos = list(point_dict.keys())
-        r.shuffle(photos)
-
-
-        return render_template('quiz4.html', i=session['q4_question_count'], photos=photos)
+        print(random_tuple)
+        session['q4_correct_answer'] = random_tuple[1]
+        #print(random_tuple[0], random_tuple[1])
+        return render_template('quiz4.html', i=session['q4_question_count'], photo=random_tuple[0])
     else:
-        session['quiz_redirect'] = 3
+        session['quiz_redirect'] = 4
         return redirect(url_for('results'))
 
 @app.route("/results")
@@ -329,7 +324,8 @@ def results():
         if session['quiz_redirect'] < 4:
             d[el[0] + 1] = el[1] == el[2]
         else:
-            threshold = 0.20
+            threshold = 0.1
+            print(el[1], el[2], "xddddd")
             d[el[0] + 1] = abs(el[1] - el[2]) <= threshold
     score = sum(d.values())
     perc = m.ceil(sum(d.values()) / len(d.items()) * 100)
