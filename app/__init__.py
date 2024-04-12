@@ -252,7 +252,7 @@ def profile():
     training_sessions = Training_Session_Result.query.filter_by(userId=curr_user.id).all()
     params = []
     for el in training_sessions:
-        params.append([el.endedAt, el.score, el.total_score, m.ceil(el.score/el.total_score*100)])
+        params.append([training_sessions.index(el) + 1, el.endedAt, el.score, el.total_score, m.ceil(el.score/el.total_score*100)])
     print(params)
     return render_template("profile.html", params=params)
 
