@@ -32,17 +32,33 @@ with open(json_file_path, 'r') as file:
 # Znajdź brakujące wartości w pliku .json
 missing_values = find_missing_values(json_data)
 
+def get_all_files_in_folder(folder_path):
+    # Sprawdź, czy folder istnieje
+    if not os.path.exists(folder_path):
+        print(f"Folder '{folder_path}' nie istnieje.")
+        return []
 
-# Wyświetl nazwy zdjęć, dla których wszystkie dane są poprawne
+    # Pobierz listę plików w folderze
+    file_list = os.listdir(folder_path)
+
+    # Zwróć listę nazw plików
+    return file_list
+
+# Wywołanie funkcji i wyświetlenie nazw plików
+file_names = get_all_files_in_folder(os.path.join(os.getcwd(), 'app', 'static', 'db_files'))
+
 valid_records = []
+invalid_records = []
 for record in json_data:
     is_valid = True
     for key in ["Displayer ID", "Picture ID", "Male/ Female", "Display", "Agreement (%)", "Putity   (0-1)", "Intensity (0-1)", "N", "FACS "]:
         if key not in record:
             is_valid = False
             break
-    if is_valid:
+    if is_valid and record['Picture ID'] in file_names:  # Dodana pętla sprawdzająca obecność Picture ID na liście file_names
         valid_records.append(record['Picture ID'])
+    else:
+        invalid_records.append(record['Picture ID'])
 
 # Ścieżka do pliku valid_records.txt
 valid_records_file_path = 'valid_records.txt'
