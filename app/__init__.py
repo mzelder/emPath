@@ -206,10 +206,10 @@ def quiz2():
 def results():
     d = {}
     for el in session["q" + str(session['quiz_redirect']) + "_question_sequence"]:
-        d[el[0]] = el[1] == el[2]
+        d[el[0] + 1] = el[1] == el[2]
     score = sum(d.values())
     perc = m.ceil(sum(d.values()) / len(d.items()) * 100)
-    return render_template("results.html", questions=d, score=score, perc=perc)
+    return render_template("results.html", questions=d, score=score, perc=perc, total_questions=len(d.items()))
 
 
 @app.route("/account")
