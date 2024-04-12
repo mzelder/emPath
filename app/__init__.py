@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, abort, session, redirect, url_for, flash
+from flask import Flask, render_template, request, abort, session, redirect, url_for, flash, send_from_directory
 from werkzeug.security import generate_password_hash, check_password_hash
 from models import db, User, UserServer
 import re
@@ -72,7 +72,7 @@ def index():
         if user and check_password_hash(user.password, pwd):
             session["current_user"] = uname
             return render_template('home.html')
-        flash(message="Invalid username or password.", category=None)       
+        flash(message="Invalid username or password.", category="danger")       
     return render_template('index.html')
 
 @app.route("/who-are-you", methods=['GET', 'POST'])
@@ -108,22 +108,22 @@ def register():
 
         # validation starts here
         if len(u) == 0:                                               # null username
-            flash(message='Username cannot be empty.', category=None)
+            flash(message='Username cannot be empty.', category="danger")
             return redirect(url_for('register'))
         if p != pc:                                                   # incorrect pwd == pwdconfirm
-            flash(message='Passwords have to match.', category=None)
+            flash(message='Passwords have to match.', category="danger")
             return redirect(url_for('register'))
         
         exist_check = UserServer.query.filter_by(username=u).first()  # does the account already exist?
         if exist_check:
-            flash(message='Account with this username already exists.', category=None)
+            flash(message='Account with this username already exists.', category="danger")
             return redirect(url_for('register'))          
         
                                                                       # does the password match the regex?
         if not re.match("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$", p):
             # min. 8 chars, >=1 upper case English letter, >=1 lower case English letter, 
             # >=1 number and >=1 special character
-            flash(message='Password must include: min. 8 characters: 1 uppercase, 1 lowercase, 1 digit, 1 special.', category=None)
+            flash(message='Password must include: min. 8 characters: 1 uppercase, 1 lowercase, 1 digit, 1 special.', category="danger")
             return redirect(url_for('register'))
         
         if account_type == 'user':
@@ -136,8 +136,9 @@ def register():
 
 
 @app.route("/home", methods=['GET', 'POST'])
-@login_required
+#@login_required
 def home():
+    session["user_type"] = "user"
     if request.method == 'POST':
         next_form = str(request.form.get('form_value'))
         return redirect(url_for(next_form))
@@ -179,7 +180,12 @@ def quiz1():
         return redirect(url_for('results'))
     
     
-        
+@app.route('/download-db')
+def download_db():
+    directory = os.path.join(app.instance_path)  # Path to your instance folder
+    print(directory)
+    filename = 'db.sqlite3'
+    return send_from_directory(directory, filename, as_attachment=True)
     
 
 
@@ -196,7 +202,7 @@ def quiz2():
     return render_template("quiz1.html")
 
 @app.route("/results")
-@login_required
+#@login_required
 def results():
     d = {}
     for el in session["q" + str(session['quiz_redirect']) + "_question_sequence"]:
@@ -207,7 +213,7 @@ def results():
 
 
 @app.route("/account")
-@login_required
+#@login_required
 def account():
     pass
 
