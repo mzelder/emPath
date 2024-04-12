@@ -271,10 +271,12 @@ def quiz3():
         for item in random_tuple[1]:
             point_dict[str(item)] = 0
 
-        photos = list(point_dict.keys())
+        photos = list(random_tuple)
         r.shuffle(photos)
 
-        return render_template('quiz3.html', i=session['q3_question_count'], photos=random_tuple)
+
+
+        return render_template('quiz3.html', i=session['q3_question_count'], photos=photos)
     else:
         session['quiz_redirect'] = 3
         return redirect(url_for('results'))
@@ -366,7 +368,7 @@ def profile():
     params = []
     for i in range(len(training_sessions)):
         params.append([i + 1, training_sessions[i].endedAt, training_sessions[i].score, training_sessions[i].total_score,\
-                       m.ceil(training_sessions[i].score/training_sessions[i].total_score*100)])
+                       m.ceil(training_sessions[i].score/training_sessions[i].total_score*100), training_sessions[i].test_type])
     return render_template("profile.html", params=params)
 
 if __name__ == "__main__":
