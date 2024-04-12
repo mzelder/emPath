@@ -1,17 +1,19 @@
 {% extends "base.html" %}
+
 {% block title %} Question {% endblock %}
+
 {% block body %}
-    <div class="container text-center p-5 mt-3">
-        <h3 class="text-white fw-light">Choose which picture best describes the following emotion.</h3>
-        <h4 class="text-white mt-5">Angry</h4>
-        <div class="d-flex flex-wrap justify-content-center mt-5">
-        {% for emotion in range(4) %}
-            <form action="{{  url_for('quiz2')  }}" method="POST" class="mx-4">
-                <button class="btn btn-white border w-100 p-0 mt-3 rounded-3 cool-hover fixed-btn" style="background-color: white; color: black;">
-                    <img src="/static/db_files/AD_7885.jpg" width="250px">
-                </button>
-            </form>
-            {% endfor %}
-        </div>
+<div class="container text-center p-5 mt-3">
+    <h3 class="text-white fw-light">Choose which picture best describes the following emotion:</h3>
+    <h4 class="text-white mt-5">{{ emotion }}</h4> <!-- Dynamically display the emotion -->
+    <div class="d-flex flex-wrap justify-content-center mt-5">
+    {% for photo in photos %} <!-- Loop through each photo -->
+        <form action="{{ url_for('quiz2') }}" method="POST" class="mx-4">
+            <button type="submit" name="answer" value="{{ photo }}" class="btn btn-white border w-100 p-0 mt-3 rounded-3 cool-hover fixed-btn" style="background-color: white; color: black;">
+                <img src="/static/db_files/{{ photo }}" width="250px"> <!-- Dynamic image source -->
+            </button>
+        </form>
+    {% endfor %}
     </div>
+</div>
 {% endblock %}
