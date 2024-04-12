@@ -33,6 +33,7 @@ class Training_Session_Result(db.Model):
     type = db.Column(db.Enum('diagnosis', 'training'), nullable=False)
     score = db.Column(db.Integer, nullable = False)
     total_score = db.Column(db.Integer, nullable = False)
+    test_type = db.Column(db.Enum('Choose Emotion', 'Choose Person', 'Intensity Comparison Training', 'Intensity Estimation Training'), nullable=False)
 
 class UserServer(db.Model):
     __tablename__ = "login_validation"
