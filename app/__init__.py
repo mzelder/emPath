@@ -12,6 +12,7 @@ import json
 from sqlalchemy import func
 import DataFormater.RandomPhotoPickerOneToFour as q1handle
 import DataFormater.Random4Photos1Emotion as q2handle
+import DataFormater.OneEmotionTwoPhotos as q3handle
 from functools import wraps
 import random as r
 import math as m
@@ -247,6 +248,47 @@ def quiz2():
         session['quiz_redirect'] = 2
         return redirect(url_for('results'))
 
+
+@app.route("/quiz3", methods=['GET', 'POST'])
+#@login_required
+def quiz3():
+    #if request.method == "GET":
+    #    return redirect(url_for('home'))
+    
+    if 'q3_time_start' not in session:
+        session['q3_time_start'] = db.session.query(func.now()).scalar().astimezone()
+
+    if 'q3_question_sequence' not in session:
+        session['q3_question_sequence'] = []
+
+    if 'q3_question_count' not in session:
+        session['q3_question_count'] = 0
+
+    if request.method == 'POST':
+        ans = str(request.form.get('answer'))  # Convert answer to integer directly
+        correct_answer = session.get('q3_correct_answer')
+        session['q3_question_sequence'].append((session['q3_question_count'], ans, correct_answer))
+        session['q3_question_count'] += 1
+        return redirect(url_for('quiz3'))
+    
+    if session['q3_question_count'] < 10:
+        random_tuple = q3handle.get_output()
+        session['q3_correct_answer'] = random_tuple[0]
+        point_dict = {str(random_tuple[0]): 1}
+
+        for item in random_tuple[1]:
+            point_dict[str(item)] = 0
+
+        photos = list(point_dict.keys())
+        r.shuffle(photos)
+
+        print(photos, random_tuple[0])
+
+        return render_template('quiz3.html', i=session['q3_question_count'], photos=photos)
+    else:
+        session['quiz_redirect'] = 3
+        return redirect(url_for('results'))
+
 @app.route("/results")
 @login_required
 def results():
@@ -262,19 +304,28 @@ def results():
         session_type = 'training'
     else:
         session_type = 'diagnosis'
+    
+    if session['quiz_redirect'] == 1:
+        t_type = 'Choose Emotion'
+    if session['quiz_redirect'] == 2:
+        t_type = 'Choose Person'
+    if session['quiz_redirect'] == 3:
+        t_type = 'Intensity Comparison Training'
+    if session['quiz_redirect'] == 4:
+        t_type = 'Intensity Estimation Training'
 
-    new_session = Training_Session_Result(userId=curr_user.userId, startedAt=session['q1_time_start'],\
+    new_session = Training_Session_Result(userId=curr_user.userId, startedAt=session['q' + str(session['quiz_redirect']) + '_time_start'],\
                                            endedAt=db.session.query(func.now()).scalar(), \
                                             type=session_type,\
-                                            score=score, total_score = len(d.items()))
+                                            score=score, total_score = len(d.items()), test_type=t_type)
     
     db.session.add(new_session)
     db.session.commit()
 
-    del session['q1_time_start']
-    del session['q1_question_sequence']
-    del session['q1_question_count']
-    del session['q1_correct_answer']
+    del session['q' + str(session['quiz_redirect']) + '_time_start']
+    del session['q' + str(session['quiz_redirect']) + '_question_sequence']
+    del session['q' + str(session['quiz_redirect']) + '_question_count']
+    del session['q' + str(session['quiz_redirect']) + '_correct_answer']
     return render_template("results.html", questions=d, score=score, perc=perc, total_questions=len(d.items()))
 
 
