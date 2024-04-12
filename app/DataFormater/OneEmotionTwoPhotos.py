@@ -26,9 +26,9 @@ def get_random_picture_ids_by_emotion(json_file_path):
         selected_picture_data = random.sample(chosen_emotion_picture_data, 2)
 
     if selected_picture_data[0]['Intensity (0-1)'] > selected_picture_data[1]['Intensity (0-1)']:
-        return (selected_picture_data[0], selected_picture_data[1])
+        return (selected_picture_data[0]['Picture ID'], selected_picture_data[1]['Picture ID'])
     else:
-        return (selected_picture_data[1], selected_picture_data[0])
+        return (selected_picture_data[1]['Picture ID'], selected_picture_data[0]['Picture ID'])
 
 
 def get_output():

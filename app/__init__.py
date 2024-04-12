@@ -239,21 +239,11 @@ def quiz2():
         return render_template('quiz2.html', i=session['q2_question_count'], photos=photos, emotion=random_tuple[2])
     else:
         session['quiz_redirect'] = 2
-        return redirect(url_for('results'))
-    
-@app.route("/quiz3", methods=['GET', 'POST'])
-#@login_required
-def quiz3():
-    return render_template('quiz3.html')
-
-@app.route("/quiz4", methods=['GET', 'POST'])
-#@login_required
-def quiz4():
-    return render_template('quiz4.html')
+        return redirect(url_for('results')) 
 
 
 @app.route("/quiz3", methods=['GET', 'POST'])
-#@login_required
+@login_required
 def quiz3():
     #if request.method == "GET":
     #    return redirect(url_for('home'))
@@ -284,10 +274,51 @@ def quiz3():
 
         photos = list(point_dict.keys())
         r.shuffle(photos)
+        print(photos)
 
         print(photos, random_tuple[0])
 
         return render_template('quiz3.html', i=session['q3_question_count'], photos=photos)
+    else:
+        session['quiz_redirect'] = 3
+        return redirect(url_for('results'))
+
+@app.route("/quiz4", methods=['GET', 'POST'])
+@login_required
+def quiz4():
+    #if request.method == "GET":
+    #    return redirect(url_for('home'))
+    
+    if 'q4_time_start' not in session:
+        session['q4_time_start'] = db.session.query(func.now()).scalar().astimezone()
+
+    if 'q4_question_sequence' not in session:
+        session['q4_question_sequence'] = []
+
+    if 'q4_question_count' not in session:
+        session['q4_question_count'] = 0
+
+    if request.method == 'POST':
+        ans = float(request.form.get('answer'))  # Convert answer to integer directly
+        correct_answer = session.get('q4_correct_answer')
+        session['q4_question_sequence'].append((session['q3_question_count'], ans, correct_answer))
+        session['q4_question_count'] += 1
+        return redirect(url_for('quiz4'))
+    
+    if session['q4_question_count'] < 10:
+        random_tuple = q3handle.get_output()
+        session['q4_correct_answer'] = random_tuple[0]
+        point_dict = {str(random_tuple[0]): 1}
+
+        for item in random_tuple[1]:
+            point_dict[str(item)] = 0
+
+        photos = list(point_dict.keys())
+        r.shuffle(photos)
+
+        print(photos, random_tuple[0])
+
+        return render_template('quiz4.html', i=session['q4_question_count'], photos=photos)
     else:
         session['quiz_redirect'] = 3
         return redirect(url_for('results'))
