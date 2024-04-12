@@ -92,5 +92,5 @@ def generate_output():
     InCorrectPhotos = [InCorrectPhoto1, InCorrectPhoto2, InCorrectPhoto3]
     return (CorrectPhoto, InCorrectPhotos, get_display_for_picture_id(CorrectPhoto))
 
-print(generate_output())
+
     

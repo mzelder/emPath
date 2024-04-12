@@ -20,7 +20,9 @@ def get_random_picture_ids_by_emotion(json_file_path):
             chosen_emotion_picture_data.append(picture_data)
 
     # Losowe wybranie dwóch Picture ID wraz z Intensity (0-1) z wybranej emocji
+
     selected_picture_data = random.sample(chosen_emotion_picture_data, 2)
+    print(selected_picture_data)
 
     # Zapytanie użytkownika, które Picture ID jest bardziej intensywne to można usunąc w zależności jak front to przyjmuje
     print(f"Które Picture ID jest według Ciebie bardziej intensywne dla emocji '{chosen_emotion}'?")
