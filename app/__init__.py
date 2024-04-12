@@ -160,8 +160,8 @@ def home():
 @app.route("/quiz1", methods=['POST', "GET"])
 #@login_required
 def quiz1():
-    #if request.method == "GET":
-    #    return redirect(url_for('home'))
+    # if request.method == "GET":
+    #     return redirect(url_for('home'))
     
     if 'q1_time_start' not in session:
         session['q1_time_start'] = db.session.query(func.now()).scalar().astimezone()
@@ -207,8 +207,8 @@ def download_db():
     
 
 
-@app.route("/quiz2", methods=['POST', "GET"])
-@login_required
+@app.route("/quiz2", methods=['GET', 'POST'])
+#@login_required
 def quiz2():
     #if request.method == "GET":
     #    return redirect(url_for('home'))
