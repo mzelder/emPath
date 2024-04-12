@@ -44,7 +44,6 @@ def login_required(f):
 
 def create_account(uname, pwd, birth_year=None, residency=None, sex=None, account_type=None):
     pwd_hash = generate_password_hash(pwd)
-    uname_hash = generate_password_hash(uname)
     if account_type == 'user':
         new_user_data = User(birthYear = birth_year, sex=sex, placeOfResidence=residency) #personal data of the user
         db.session.add(new_user_data)
@@ -52,7 +51,7 @@ def create_account(uname, pwd, birth_year=None, residency=None, sex=None, accoun
         new_user_server = UserServer(username=uname, password=pwd_hash, type=account_type, userId=fresh_user) #login data for the user
         db.session.add(new_user_server)
     else:
-        new_user_server = UserServer(username=uname_hash, password=pwd_hash, type=account_type) #login data for the user
+        new_user_server = UserServer(username=uname, password=pwd_hash, type=account_type) #login data for the user
         db.session.add(new_user_server)
 
     db.session.commit() #adding user into login db and data db
@@ -373,4 +372,4 @@ def profile():
     return render_template("profile.html", params=params)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
