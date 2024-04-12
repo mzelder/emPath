@@ -13,6 +13,7 @@ from sqlalchemy import func
 import DataFormater.RandomPhotoPickerOneToFour as q1handle
 import DataFormater.Random4Photos1Emotion as q2handle
 import DataFormater.OneEmotionTwoPhotos as q3handle
+
 from functools import wraps
 import random as r
 import math as m
@@ -297,14 +298,14 @@ def quiz4():
         session['q4_question_count'] = 0
 
     if request.method == 'POST':
-        ans = float(request.form.get('answer'))  # Convert answer to integer directly
+        ans = float(request.form.get('range-q4'))  # Convert answer to integer directly
         correct_answer = session.get('q4_correct_answer')
         session['q4_question_sequence'].append((session['q3_question_count'], ans, correct_answer))
         session['q4_question_count'] += 1
         return redirect(url_for('quiz4'))
     
-    if session['q4_question_count'] < 10:
-        random_tuple = q3handle.get_output()
+    if session['q4_question_count'] < 15:
+        random_tuple = q4handle.get_output()
         session['q4_correct_answer'] = random_tuple[0]
         point_dict = {str(random_tuple[0]): 1}
 
@@ -325,7 +326,11 @@ def quiz4():
 def results():
     d = {}
     for el in session["q" + str(session['quiz_redirect']) + "_question_sequence"]:
-        d[el[0] + 1] = el[1] == el[2]
+        if session['quiz_redirect'] < 4:
+            d[el[0] + 1] = el[1] == el[2]
+        else:
+            threshold = 0.20
+            d[el[0] + 1] = abs(el[1] - el[2]) <= threshold
     score = sum(d.values())
     perc = m.ceil(sum(d.values()) / len(d.items()) * 100)
 
