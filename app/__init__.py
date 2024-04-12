@@ -45,7 +45,6 @@ def create_account(uname, pwd, birth_year=None, residency=None, sex=None, accoun
     pwd_hash = generate_password_hash(pwd)
     uname_hash = generate_password_hash(uname)
     if account_type == 'user':
-        print("siema")
         new_user_data = User(birthYear = birth_year, sex=sex, placeOfResidence=residency) #personal data of the user
         db.session.add(new_user_data)
         fresh_user = db.session.query(func.max(User.userId)).scalar()
@@ -234,7 +233,7 @@ def quiz2():
         photos = list(point_dict.keys())
         r.shuffle(photos)
 
-        print(photos, random_tuple[2], random_tuple[0])
+       #print(photos, random_tuple[2], random_tuple[0])
 
         return render_template('quiz2.html', i=session['q2_question_count'], photos=photos, emotion=random_tuple[2])
     else:
@@ -274,11 +273,8 @@ def quiz3():
 
         photos = list(point_dict.keys())
         r.shuffle(photos)
-        print(photos)
 
-        print(photos, random_tuple[0])
-
-        return render_template('quiz3.html', i=session['q3_question_count'], photos=photos)
+        return render_template('quiz3.html', i=session['q3_question_count'], photos=random_tuple)
     else:
         session['quiz_redirect'] = 3
         return redirect(url_for('results'))
@@ -316,7 +312,6 @@ def quiz4():
         photos = list(point_dict.keys())
         r.shuffle(photos)
 
-        print(photos, random_tuple[0])
 
         return render_template('quiz4.html', i=session['q4_question_count'], photos=photos)
     else:
@@ -372,7 +367,6 @@ def profile():
     for i in range(len(training_sessions)):
         params.append([i + 1, training_sessions[i].endedAt, training_sessions[i].score, training_sessions[i].total_score,\
                        m.ceil(training_sessions[i].score/training_sessions[i].total_score*100)])
-    print(params)
     return render_template("profile.html", params=params)
 
 if __name__ == "__main__":
