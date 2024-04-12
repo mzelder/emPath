@@ -12,7 +12,7 @@ class User(db.Model):
     sex = db.Column(db.Enum('F', 'M'), nullable=False) #Płeć metrykalna w momencie narodzin. F or M
     placeOfResidence = db.Column(db.String(50), nullable=False) # village < 20 tys, town - 20-100 tys, city > 100 tys
     additionalInformation = db.Column(db.String(500), nullable=True) #Opcjonalne. Dodatkowe informacje o użytkowniku. Np. zawód, wykształcenie, przebyte choroby.
-    training_sessions = db.relationship("Training_Session", backref="user", lazy=True)
+    #training_sessions = db.relationship("Training_Session", backref="user", lazy=True)
 
 #class Resource(db.Model):
 #    __tablename__ = "resources"
