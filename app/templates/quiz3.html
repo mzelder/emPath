@@ -6,10 +6,10 @@
 <div class="container text-center p-5 mt-3">
     <h3 class="text-white fw-light">Choose the picture in which you think the emotion is more intense.</h3>
     <div class="d-flex flex-wrap justify-content-center mt-5">
-    {% for photo in range(2) %} <!-- Loop through each photo -->
-        <form action="{{ url_for('quiz2') }}" method="POST" class="mx-4">
+    {% for photo in photos %} <!-- Loop through each photo provided by the Flask app -->
+        <form action="{{ url_for('quiz3') }}" method="POST" class="mx-4">
             <button type="submit" name="answer" value="{{ photo }}" class="btn btn-white border w-100 p-0 mt-3 rounded-3 cool-hover fixed-btn" style="background-color: white; color: black;">
-                <img src="/static/db_files/AD_7885.jpg" width="250px"> <!-- Dynamic image source -->
+                <img src="/static/db_files/{{ photo }}" width="250px"> <!-- Dynamic image source -->
             </button>
         </form>
     {% endfor %}

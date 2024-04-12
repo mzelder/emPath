@@ -240,11 +240,7 @@ def quiz2():
     else:
         session['quiz_redirect'] = 2
         return redirect(url_for('results'))
-    
-@app.route("/quiz3", methods=['GET', 'POST'])
-#@login_required
-def quiz3():
-    return render_template('quiz3.html')
+
 
 @app.route("/quiz4", methods=['GET', 'POST'])
 #@login_required
