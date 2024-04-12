@@ -138,7 +138,6 @@ def register():
 @app.route("/home", methods=['GET', 'POST'])
 #@login_required
 def home():
-    session["user_type"] = "user"
     if request.method == 'POST':
         next_form = str(request.form.get('form_value'))
         return redirect(url_for(next_form))
@@ -209,7 +208,8 @@ def results():
         d[el[0]] = el[1] == el[2]
     score = sum(d.values())
     perc = m.ceil(sum(d.values()) / len(d.items()) * 100)
-    return render_template("results.html", questions=d, score=score, perc=perc)
+    print(d, score, perc, len(d.items()))
+    return render_template("results.html", questions=d, score=score, perc=perc, total_questions=len(d.items()))
 
 
 @app.route("/account")
