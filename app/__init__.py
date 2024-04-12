@@ -135,6 +135,7 @@ def register():
             flash(message='Password must include: min. 8 characters: 1 uppercase, 1 lowercase, 1 digit, 1 special.', category="danger")
             return redirect(url_for('register'))
         
+        session["current_user"] = u
         if account_type == 'user':
             create_account(u, p, birth_year, sex, residency, account_type)              # allow creation
             return redirect(url_for('home'))  
@@ -235,6 +236,10 @@ def results():
     db.session.add(new_session)
     db.session.commit()
 
+    del session['q1_time_start']
+    del session['q1_question_sequence']
+    del session['q1_question_count']
+    del session['q1_correct_answer']
     return render_template("results.html", questions=d, score=score, perc=perc, total_questions=len(d.items()))
 
 
