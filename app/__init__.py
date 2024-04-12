@@ -371,7 +371,7 @@ def profile():
     params = []
     for i in range(len(training_sessions)):
         params.append([i + 1, training_sessions[i].endedAt, training_sessions[i].score, training_sessions[i].total_score,\
-                       m.ceil(training_sessions[i].score/training_sessions[i].total_score*100)])
+                       m.ceil(training_sessions[i].score/training_sessions[i].total_score*100), training_sessions[i].test_type])
     print(params)
     return render_template("profile.html", params=params)
 
