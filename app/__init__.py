@@ -142,7 +142,7 @@ def register():
 
 
 @app.route("/home", methods=['GET', 'POST'])
-#@login_required
+@login_required
 def home():
     if request.method == 'POST':
         next_form = str(request.form.get('form_value'))
@@ -151,7 +151,7 @@ def home():
 
 
 @app.route("/quiz1", methods=['POST', "GET"])
-#@login_required
+@login_required
 def quiz1():
     # if request.method == "GET":
     #     return redirect(url_for('home'))
@@ -190,8 +190,9 @@ def quiz1():
         session['quiz_redirect'] = 1
         return redirect(url_for('results'))
     
-    
+
 @app.route('/download-db')
+@login_required
 def download_db():
     directory = os.path.join(app.instance_path)  # Path to your instance folder
     print(directory)
@@ -201,7 +202,7 @@ def download_db():
 
 
 @app.route("/quiz2", methods=['GET', 'POST'])
-#@login_required
+@login_required
 def quiz2():
     #if request.method == "GET":
     #    return redirect(url_for('home'))
