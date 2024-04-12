@@ -11,11 +11,6 @@ print(os.path.join(os.getcwd(), 'app', 'static', 'db_files'))
 folder_path = os.path.join(os.getcwd(), 'app', 'static', 'db_files')  # Ścieżka do folderu z plikami
 json_file_path = 'textformated.json'  # Ścieżka do pliku .json
 
-# Sprawdź, czy folder istnieje
-if not os.path.exists(folder_path):
-    print(f"Folder '{folder_path}' nie istnieje.")
-    exit()
-
 # Sprawdź, czy plik .json istnieje
 if not os.path.exists(json_file_path):
     print(f"Plik '{json_file_path}' nie istnieje.")
@@ -58,7 +53,7 @@ def get_all_files_in_folder(folder_path):
 folder_path = 'db_files'
 
 # Wywołanie funkcji i wyświetlenie nazw plików
-file_names = get_all_files_in_folder(folder_path)
+file_names = get_all_files_in_folder(os.path.join(os.getcwd(), 'app', 'static', 'db_files'))
 
 def get_picture_ids_from_json(json_file_path):
     # Sprawdź, czy plik .json istnieje
