@@ -14,6 +14,7 @@ import DataFormater.RandomPhotoPickerOneToFour as q1handle
 import DataFormater.Random4Photos1Emotion as q2handle
 from functools import wraps
 import random as r
+import math as m
 
 # inicjalizacja aplikacji
 app = Flask(__name__)
@@ -174,7 +175,8 @@ def quiz1():
 
         return render_template('quiz1.html', i=session['q1_question_count'], emotions=emotions, img_src=random_tuple[2])
     else:
-        return redirect(url_for('results', quiz_no=1))
+        session['quiz_redirect'] = 1
+        return redirect(url_for('results'))
     
     
         
@@ -195,8 +197,13 @@ def quiz2():
 
 @app.route("/results")
 @login_required
-def results(quiz_no):
-    return session[f'q{quiz_no}_question_sequence']
+def results():
+    d = {}
+    for el in session["q" + str(session['quiz_redirect']) + "_question_sequence"]:
+        d[el[0]] = el[1] == el[2]
+    score = sum(d.values())
+    perc = m.ceil(sum(d.values()) / len(d.items()) * 100)
+    return render_template("results.html", questions=d, score=score, perc=perc)
 
 
 @app.route("/account")
