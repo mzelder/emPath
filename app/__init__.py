@@ -373,4 +373,4 @@ def profile():
     return render_template("profile.html", params=params)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
